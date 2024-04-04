@@ -1,0 +1,142 @@
+using System.Data;
+using System.Data.SqlClient;
+using System.Dynamic;
+using Microsoft.EntityFrameworkCore;
+using Farm.Models.Data;
+using Farm.Models;
+using Farm.Models.Lookup;
+
+namespace Farm.Repositories
+{
+    public class Farmers_LoginRepository : IFarmers_LoginRepository
+    {
+        private readonly FarmDbContext FarmDbContext;
+
+        public Farmers_LoginRepository(FarmDbContext FarmDbContext)
+        {
+            this.FarmDbContext = FarmDbContext;
+        }
+
+        public async Task<List<Farmers_Login>> GetAllFarmers_Login()
+        {
+            return await FarmDbContext.Farmers_Login.OrderByDescending(d => d.Id).ToListAsync();
+        }
+
+        public async Task<IEnumerable<object>> GetFarmers_LoginLookup()
+        {
+            return await FarmDbContext.Farmers_Login
+            .Select(s => new
+            {
+                Id = s.Id,
+                Name = s.Farmer_Tally_Code
+            }).OrderByDescending(d => d.Id).ToListAsync();
+        }
+
+        public async Task<Farmers_Login> GetFarmers_LoginById(int id)
+        {
+            return await FarmDbContext.Farmers_Login.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<Farmers_Login> CreateFarmers_Login(Farmers_Login farmers_Login)
+        {
+            farmers_Login.Id = GetNextId();
+            await FarmDbContext.AddRangeAsync(farmers_Login);
+            await FarmDbContext.SaveChangesAsync();
+
+            return this.FarmDbContext.Farmers_Login.First(a => a.Id == farmers_Login.Id);
+        }
+
+        public async Task<Farmers_Login> UpdateFarmers_Login(int Id, Farmers_Login farmers_Login)
+        {
+            var farmers_LoginDetails = await FarmDbContext.Farmers_Login.FirstOrDefaultAsync(x => x.Id == Id);
+            if (farmers_LoginDetails == null)
+            {
+                return null;
+            }
+            System.Reflection.PropertyInfo[] propertiesInfo = farmers_LoginDetails.GetType().GetProperties();
+            foreach(System.Reflection.PropertyInfo propInfo in propertiesInfo)
+            {
+                propInfo.SetValue(farmers_LoginDetails, farmers_Login.GetType().GetProperty(propInfo.Name).GetValue(farmers_Login));
+            }
+            farmers_LoginDetails.Id = Id;
+            await FarmDbContext.SaveChangesAsync();
+            return this.FarmDbContext.Farmers_Login.First(a => a.Id == farmers_LoginDetails.Id);
+        }
+
+	  public async Task<IEnumerable<Farmers_Login>> DeleteFarmers_Login(int id)
+      {
+            var list = await FarmDbContext.Farmers_Login.Where(s => id == s.Id).ToListAsync();
+            FarmDbContext.Farmers_Login.RemoveRange(list);
+            await FarmDbContext.SaveChangesAsync();
+            return list;
+      }
+
+	public async Task<Farmers_Login> UpdateFarmers_LoginStatus(int Id)
+        {
+            var farmers_LoginDetails = await FarmDbContext.Farmers_Login.FirstOrDefaultAsync(x => x.Id == Id);
+            if (farmers_LoginDetails == null)
+            {
+                return null;
+            }
+            farmers_LoginDetails.IsActive = false;
+            await FarmDbContext.SaveChangesAsync();
+            return this.FarmDbContext.Farmers_Login.First(a => a.Id == farmers_LoginDetails.Id);
+        }
+
+      private int GetNextId()
+      {
+        int? maxId = FarmDbContext.Farmers_Login.Max(p => p.Id);
+        if (maxId == null)
+        {
+            maxId = 0;
+        }
+        return ((int)maxId + 3);
+      }
+
+public Dictionary<string, object> SearchFarmers_Login(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection)
+        {
+            Dictionary<string, object> result = new Dictionary<string, object>();
+            try
+            {
+                // string ConnectionString = "Server=162.215.230.14;Database=a1685bx6_farm;User Id=lboils;Password=lboils_user;TrustServerCertificate=True";
+                string ConnectionString = this.FarmDbContext.Database.GetDbConnection().ConnectionString;
+                DataSet dataset = new DataSet();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                //Add the parameter to the Parameters property of SqlCommand object
+                adapter.SelectCommand = new SqlCommand("GetSearchFarmers_Login", new SqlConnection(ConnectionString));
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@txt", SqlDbType = SqlDbType.VarChar, Value = searchString, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageIndex", SqlDbType = SqlDbType.VarChar, Value = pageNumber, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageSize", SqlDbType = SqlDbType.VarChar, Value = pageSize, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@sortColumn", SqlDbType = SqlDbType.VarChar, Value = sortColumn, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@sortDirection", SqlDbType = SqlDbType.VarChar, Value = sortDirection, Direction = ParameterDirection.Input });
+
+                adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
+                adapter.Fill(dataset);
+                Dictionary<string, string> tempRecord = new Dictionary<string, string>();
+                List<object> record = new List<object>();
+                string propertyName = "";
+                // record = new KeyValuePair<string, string>();
+                foreach (DataRow dr in dataset.Tables[0].Rows)
+                {
+                    tempRecord = new Dictionary<string, string>();
+                    var obj1 = new ExpandoObject();
+                    foreach (DataColumn dc in dataset.Tables[0].Columns)
+                    {
+                        propertyName = dc.ColumnName;
+                        tempRecord.Add(dc.ColumnName, dr[dc.ColumnName] == null ? "" : Convert.ToString(dr[dc.ColumnName]));
+                    }
+                    record.Add(tempRecord);
+                }
+                result.Add("data", record);
+                result.Add("TotalRecordsCount", dataset.Tables[1].Rows[0]["TotalRowCount"]);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception Occurred: {ex.Message}");
+            }
+
+            return result;
+        }
+}
+}
