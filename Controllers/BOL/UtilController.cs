@@ -113,19 +113,18 @@ namespace Farm.Controllers
         public string InsertTableByColumns(Dictionary<string, object> insertInfo)
         {
             Dictionary<string, object> insertColumnsList = insertInfo["insertColumnsList"] as Dictionary<string, object>;
-            string tableName = updateInfo["tableName"] as string;
+            string tableName = insertInfo["tableName"] as string;
             var sql = "INSERT INTO [lboils].[" + tableName + "] (";
             var valuesStr = "";
             int counter = 0;
             
-            if (insertColumnsList != null && tableName != null && primaryKeysList != null)
+            if (insertColumnsList != null && tableName != null)
             {
                 foreach (var item in insertColumnsList)
                 {
                     if (counter == 0)
                     {
                         sql += "[" + item.Key + "] = @" + item.Key;
-                        valuesStr += 
                     }
                     else
                     {
@@ -150,18 +149,7 @@ namespace Farm.Controllers
 
                 sql += " where ";
                 counter = 0;
-                foreach (KeyValuePair<string, object> item in primaryKeysList)
-                {
-                    if (counter == 0)
-                    {
-                        sql += "[" + item.Key + "] = @" + item.Key;
-                    }
-                    else
-                    {
-                        sql += " AND [" + item.Key + "] = @" + item.Key;
-                    }
-                    counter++;
-                }
+                
 
                 SqlConnection con = new SqlConnection("");
                 SqlCommand command = new SqlCommand();
@@ -173,10 +161,6 @@ namespace Farm.Controllers
                     command.Parameters.AddWithValue("@" + item.Key, item.Value);
                 }
 
-                foreach (var item in primaryKeysList)
-                {
-                    command.Parameters.AddWithValue("@" + item.Key, item.Value);
-                }
                 command.Connection = con;
                 if (con.State == ConnectionState.Closed)
                 {
