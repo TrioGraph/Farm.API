@@ -150,13 +150,13 @@ namespace Farm.Controllers
             }
         }
 
-	  [HttpGet("~/GetFarmersLookup")]
-        public async Task<IActionResult> GetFarmersLookup()
+	  [HttpGet("~/GetFarmersLookup/{searchText}")]
+        public async Task<IActionResult> GetFarmersLookup(string searchText)
         {
             try
             {
                 _logger.LogInformation($"Start");
-                var farmersList = await farmersRepository.GetFarmersLookup();
+                var farmersList = await farmersRepository.GetFarmersLookup(searchText);
                 _logger.LogInformation($"database call done successfully with {farmersList?.Count()}");
                 return Ok(farmersList);
             }

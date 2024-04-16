@@ -160,3 +160,4 @@ D:\Repos\Farm.API\obj\Debug\net7.0\StarterAPI.pdb
 D:\Repos\Farm.API\obj\Debug\net7.0\StarterAPI.genruntimeconfig.cache
 D:\Repos\Farm.API\bin\Debug\net7.0\StarterAPI.pdb
 D:\Repos\Farm.API\obj\Debug\net7.0\ref\StarterAPI.dll
+D:\Repos\Farm.API\bin\Debug\net7.0\Newtonsoft.Json.dll

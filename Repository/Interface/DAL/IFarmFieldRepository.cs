@@ -9,6 +9,7 @@ namespace Farm.Repositories
         
         Task<IEnumerable<object>> GetFarmFieldLookup();
 		
+        Task<IEnumerable<object>> GetFarmFieldLookupByFarmerId(int farmerId);
         Task<FarmField> GetFarmFieldById(int id);
 
         Task<FarmField> CreateFarmField(FarmField appsPermissions);

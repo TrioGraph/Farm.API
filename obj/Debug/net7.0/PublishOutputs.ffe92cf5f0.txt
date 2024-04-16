@@ -27,6 +27,7 @@ D:\Repos\Farm.API\bin\Debug\net7.0\publish\Microsoft.IdentityModel.Tokens.dll
 D:\Repos\Farm.API\bin\Debug\net7.0\publish\Microsoft.OpenApi.dll
 D:\Repos\Farm.API\bin\Debug\net7.0\publish\Microsoft.SqlServer.Server.dll
 D:\Repos\Farm.API\bin\Debug\net7.0\publish\Microsoft.Win32.SystemEvents.dll
+D:\Repos\Farm.API\bin\Debug\net7.0\publish\Newtonsoft.Json.dll
 D:\Repos\Farm.API\bin\Debug\net7.0\publish\Swashbuckle.AspNetCore.Swagger.dll
 D:\Repos\Farm.API\bin\Debug\net7.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Repos\Farm.API\bin\Debug\net7.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

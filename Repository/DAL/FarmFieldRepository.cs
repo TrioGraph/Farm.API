@@ -31,6 +31,16 @@ namespace Farm.Repositories
                 Name = s.Tally_Field_Id
             }).OrderByDescending(d => d.Id).ToListAsync();
         }
+        public async Task<IEnumerable<object>> GetFarmFieldLookupByFarmerId(int farmerId)
+        {
+            return await FarmDbContext.FarmField
+            .Where(d => d.Farmer_Id == farmerId)
+            .Select(s => new
+            {
+                Id = s.Id,
+                Name = s.Tally_Field_Id
+            }).OrderByDescending(d => d.Id).ToListAsync();
+        }
 
         public async Task<FarmField> GetFarmFieldById(int id)
         {

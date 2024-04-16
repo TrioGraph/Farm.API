@@ -22,14 +22,27 @@ namespace Farm.Repositories
             return await FarmDbContext.Farmers.OrderByDescending(d => d.Id).ToListAsync();
         }
 
-        public async Task<IEnumerable<object>> GetFarmersLookup()
+        public async Task<IEnumerable<object>> GetFarmersLookup(string searchText)
         {
+            if(searchText == null || (searchText != null && searchText.Equals("null")))
+            {
             return await FarmDbContext.Farmers
             .Select(s => new
             {
                 Id = s.Id,
-                Name = s.First_Name
-            }).OrderByDescending(d => d.Id).ToListAsync();
+                Name = s.First_Name + " " + s.Last_Name
+            }).Take(50).OrderByDescending(d => d.Id).ToListAsync();
+            }
+            else {
+            return await FarmDbContext.Farmers
+            .Where(a => a.First_Name.Contains(searchText) || 
+                     a.Last_Name.Contains(searchText))
+                     .Select(s => new
+            {
+                Id = s.Id,
+                Name = s.First_Name + " " + s.Last_Name
+            }).Take(50).OrderByDescending(d => d.Id).ToListAsync();
+            }
         }
 
         public async Task<Farmers> GetFarmersById(int id)

@@ -167,6 +167,23 @@ namespace Farm.Controllers
             }
         }
 
+        [HttpGet("~/GetFarmFieldLookupByFarmerId/farmerId")]
+        public async Task<IActionResult> GetFarmFieldLookupByFarmerId(int farmerId)
+        {
+            try
+            {
+                _logger.LogInformation($"Start");
+                var farmfieldList = await farmFieldRepository.GetFarmFieldLookupByFarmerId(farmerId);
+                _logger.LogInformation($"database call done successfully with {farmfieldList?.Count()}");
+                return Ok(farmfieldList);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.LogError(ex, ex.ToString());
+                throw;
+            }
+        }
+
         [HttpGet("~/SearchFarmField")]
         public async Task<IActionResult> SearchFarmField(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
         {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B5rFpc1JzZC40PefjGDfBMuhIQCkTkjrOcZBHYS78oB+qFqFRniQptC51/0eqoucC70x5+im1JEFL6HltPqKqg==",
+  "dgSpecHash": "+SxYAREr2ARyu/bUQhH+Fh5uBkAPQUWbZZyO3a8FESOKL38oaltudHoY2kKpxdE1Qb+RAZ2t3nYqLNcYOAT0Mg==",
   "success": true,
   "projectFilePath": "D:\\Repos\\Farm.API\\StarterAPI.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,7 @@
     "C:\\Users\\npava\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\npava\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\npava\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\npava\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\npava\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\npava\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\npava\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

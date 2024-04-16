@@ -7,7 +7,7 @@ namespace Farm.Repositories
     {
         Task<List<Farmers>> GetAllFarmers();
         
-        Task<IEnumerable<object>> GetFarmersLookup();
+        Task<IEnumerable<object>> GetFarmersLookup(string searchText);
 		
         Task<Farmers> GetFarmersById(int id);
 
