@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Employee_Types>> DeleteEmployee_Types(int roles);
        
-        Dictionary<string, object> SearchEmployee_Types(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchEmployee_Types(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

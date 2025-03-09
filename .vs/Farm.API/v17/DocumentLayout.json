@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Repos\\Farm.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4168703E-A48C-DD5D-56A7-7DFE31CFFFEB}|StarterAPI.csproj|d:\\repos\\farm.api\\repository\\dal\\districtsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4168703E-A48C-DD5D-56A7-7DFE31CFFFEB}|StarterAPI.csproj|solutionrelative:repository\\dal\\districtsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4168703E-A48C-DD5D-56A7-7DFE31CFFFEB}|StarterAPI.csproj|d:\\repos\\farm.api\\controllers\\dal\\districtscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4168703E-A48C-DD5D-56A7-7DFE31CFFFEB}|StarterAPI.csproj|solutionrelative:controllers\\dal\\districtscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4168703E-A48C-DD5D-56A7-7DFE31CFFFEB}|StarterAPI.csproj|d:\\repos\\farm.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4168703E-A48C-DD5D-56A7-7DFE31CFFFEB}|StarterAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Repos\\Farm.API\\DAL\\Controllers\\Employee_TypesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAL\\Controllers\\Employee_TypesController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Repos\\Farm.API\\BOL\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BOL\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DistrictsRepository.cs",
+              "DocumentMoniker": "D:\\Repos\\Farm.API\\Repository\\DAL\\DistrictsRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\DAL\\DistrictsRepository.cs",
+              "ToolTip": "D:\\Repos\\Farm.API\\Repository\\DAL\\DistrictsRepository.cs",
+              "RelativeToolTip": "Repository\\DAL\\DistrictsRepository.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAUwHoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T15:15:06.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DistrictsController.cs",
+              "DocumentMoniker": "D:\\Repos\\Farm.API\\Controllers\\DAL\\DistrictsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DAL\\DistrictsController.cs",
+              "ToolTip": "D:\\Repos\\Farm.API\\Controllers\\DAL\\DistrictsController.cs",
+              "RelativeToolTip": "Controllers\\DAL\\DistrictsController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAALQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T15:14:05.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Repos\\Farm.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Repos\\Farm.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T14:32:49.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee_TypesController.cs",
+              "DocumentMoniker": "D:\\Repos\\Farm.API\\DAL\\Controllers\\Employee_TypesController.cs",
+              "RelativeDocumentMoniker": "DAL\\Controllers\\Employee_TypesController.cs",
+              "ToolTip": "D:\\Repos\\Farm.API\\DAL\\Controllers\\Employee_TypesController.cs",
+              "RelativeToolTip": "DAL\\Controllers\\Employee_TypesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAtwA8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T19:18:04.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Repos\\Farm.API\\BOL\\LoginController.cs",
+              "RelativeDocumentMoniker": "BOL\\LoginController.cs",
+              "ToolTip": "D:\\Repos\\Farm.API\\BOL\\LoginController.cs",
+              "RelativeToolTip": "BOL\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T19:18:04.206Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

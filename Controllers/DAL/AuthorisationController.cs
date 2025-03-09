@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IAuthorisationRepository authorisationRepository;
         private readonly IMapper mapper;
         private readonly ILogger<AuthorisationController> _logger;
-        public AuthorisationController(IAuthorisationRepository authorisationRepository, IMapper mapper, ILogger<AuthorisationController> logger)
+	private IUtilityHelper utilityHelper;
+        public AuthorisationController(IAuthorisationRepository authorisationRepository, IMapper mapper, ILogger<AuthorisationController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.authorisationRepository = authorisationRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllAuthorisation")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchAuthorisation")]
-        public async Task<IActionResult> SearchAuthorisation(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchAuthorisation(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var authorisationList = authorisationRepository.SearchAuthorisation(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var authorisationList = authorisationRepository.SearchAuthorisation(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {authorisationList?.Count()}");
                 return Ok(authorisationList);
             }

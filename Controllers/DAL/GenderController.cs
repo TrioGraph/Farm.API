@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IGenderRepository genderRepository;
         private readonly IMapper mapper;
         private readonly ILogger<GenderController> _logger;
-        public GenderController(IGenderRepository genderRepository, IMapper mapper, ILogger<GenderController> logger)
+	private IUtilityHelper utilityHelper;
+        public GenderController(IGenderRepository genderRepository, IMapper mapper, ILogger<GenderController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.genderRepository = genderRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllGender")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchGender")]
-        public async Task<IActionResult> SearchGender(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchGender(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var genderList = genderRepository.SearchGender(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var genderList = genderRepository.SearchGender(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {genderList?.Count()}");
                 return Ok(genderList);
             }

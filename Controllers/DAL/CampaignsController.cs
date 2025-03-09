@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly ICampaignsRepository campaignsRepository;
         private readonly IMapper mapper;
         private readonly ILogger<CampaignsController> _logger;
-        public CampaignsController(ICampaignsRepository campaignsRepository, IMapper mapper, ILogger<CampaignsController> logger)
+	private IUtilityHelper utilityHelper;
+        public CampaignsController(ICampaignsRepository campaignsRepository, IMapper mapper, ILogger<CampaignsController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.campaignsRepository = campaignsRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllCampaigns")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchCampaigns")]
-        public async Task<IActionResult> SearchCampaigns(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchCampaigns(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var campaignsList = campaignsRepository.SearchCampaigns(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var campaignsList = campaignsRepository.SearchCampaigns(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {campaignsList?.Count()}");
                 return Ok(campaignsList);
             }

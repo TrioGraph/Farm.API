@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<States>> DeleteStates(int roles);
        
-        Dictionary<string, object> SearchStates(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchStates(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

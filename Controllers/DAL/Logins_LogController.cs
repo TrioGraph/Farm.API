@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly ILogins_LogRepository logins_LogRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Logins_LogController> _logger;
-        public Logins_LogController(ILogins_LogRepository logins_LogRepository, IMapper mapper, ILogger<Logins_LogController> logger)
+	private IUtilityHelper utilityHelper;
+        public Logins_LogController(ILogins_LogRepository logins_LogRepository, IMapper mapper, ILogger<Logins_LogController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.logins_LogRepository = logins_LogRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllLogins_Log")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchLogins_Log")]
-        public async Task<IActionResult> SearchLogins_Log(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchLogins_Log(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var logins_logList = logins_LogRepository.SearchLogins_Log(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var logins_logList = logins_LogRepository.SearchLogins_Log(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {logins_logList?.Count()}");
                 return Ok(logins_logList);
             }

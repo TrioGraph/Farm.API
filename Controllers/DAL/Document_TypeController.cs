@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IDocument_TypeRepository document_TypeRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Document_TypeController> _logger;
-        public Document_TypeController(IDocument_TypeRepository document_TypeRepository, IMapper mapper, ILogger<Document_TypeController> logger)
+	private IUtilityHelper utilityHelper;
+        public Document_TypeController(IDocument_TypeRepository document_TypeRepository, IMapper mapper, ILogger<Document_TypeController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.document_TypeRepository = document_TypeRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllDocument_Type")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchDocument_Type")]
-        public async Task<IActionResult> SearchDocument_Type(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchDocument_Type(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var document_typeList = document_TypeRepository.SearchDocument_Type(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var document_typeList = document_TypeRepository.SearchDocument_Type(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {document_typeList?.Count()}");
                 return Ok(document_typeList);
             }

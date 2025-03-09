@@ -9,6 +9,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Farm.Controllers;
 using System.Text;
+using Farm.Models.Data;
+
 namespace Farm.Controllers
 {
     [ApiController]
@@ -20,18 +22,21 @@ namespace Farm.Controllers
         private readonly IEmployeesRepository employeesRepository;
         private readonly IAuthenticateRepository authenticateRepository;
         private readonly IRole_PrivilegesRepository role_PrivilegesRepository;
+        private readonly IUsers_TypesRepository users_TypesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<LoginsController> logger;
         private readonly IConfiguration config;
         public LoginController(ILoginsRepository loginsRepository, IEmployeesRepository employeesRepository, 
         IRole_PrivilegesRepository role_PrivilegesRepository,
         IAuthenticateRepository authenticateRepository,
+        IUsers_TypesRepository users_TypesRepository,
         IMapper mapper, ILogger<LoginsController> logger, IConfiguration config)
         {
             this.loginsRepository = loginsRepository;
             this.employeesRepository = employeesRepository;
             this.role_PrivilegesRepository = role_PrivilegesRepository;
             this.authenticateRepository = authenticateRepository;
+            this.users_TypesRepository = users_TypesRepository;
             this.mapper = mapper;
             this.logger = logger;
             this.config = config;
@@ -41,17 +46,23 @@ namespace Farm.Controllers
         [HttpPost]
         public IActionResult Login(string userName, string password)
         {
-
-            Employees employee = this.authenticateRepository.ValidateCredentials(userName, password).Result;
-            if (employee != null)
+            Users users = this.authenticateRepository.ValidateCredentials(userName, password).Result;
+            Users_Types userType = users_TypesRepository.GetUsers_TypesById((int)users.User_Type_Id).Result;
+            if (users != null)
             {
-                var token = GenerateJwtToken(userName);
-                var role_priv = authenticateRepository.GetRole_PrivilegesByRole(employee.Employee_Type_Id);
-                return Ok(new { 
+                SessionData.UserId = users.Id;
+                var role_priv = authenticateRepository.GetRole_PrivilegesByRole(users.User_Type_Id);
+                var token = GenerateJwtToken(new { Employee = users, Privileges = role_priv });
+                // var lookupRecentUpdates = authenticateRepository.GetLookupRecentUpdates();
+                var lookupRecentUpdates = "";
+                return Ok(new {
+                    UserId = users.Id,
                     Token = token, 
-                    FirstName = employee.First_Name, 
-                    LastName = employee.Last_Name, 
-                    Role = employee.Employee_Type_Id,
+                    LookupRecentUpdates = lookupRecentUpdates,
+                    FirstName = users.First_Name, 
+                    LastName = users.Last_Name, 
+                    Role = userType.Name,
+                    RoleId = userType.Id,
                     Role_Priv = role_priv 
                     });
             }
@@ -61,14 +72,14 @@ namespace Farm.Controllers
             }
         }
 
-        private string GenerateJwtToken(string userName)
+        private string GenerateJwtToken(object userInfo)
         {
             var securityKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("this is my custom Secret key for authentication"));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-            new Claim(ClaimTypes.Name, userName),
+            new Claim("UserInfo", Newtonsoft.Json.JsonConvert.SerializeObject(userInfo)),
         };
 
             var token = new JwtSecurityToken(

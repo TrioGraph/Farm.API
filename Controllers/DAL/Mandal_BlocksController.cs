@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IMandal_BlocksRepository mandal_BlocksRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Mandal_BlocksController> _logger;
-        public Mandal_BlocksController(IMandal_BlocksRepository mandal_BlocksRepository, IMapper mapper, ILogger<Mandal_BlocksController> logger)
+	private IUtilityHelper utilityHelper;
+        public Mandal_BlocksController(IMandal_BlocksRepository mandal_BlocksRepository, IMapper mapper, ILogger<Mandal_BlocksController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.mandal_BlocksRepository = mandal_BlocksRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllMandal_Blocks")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchMandal_Blocks")]
-        public async Task<IActionResult> SearchMandal_Blocks(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchMandal_Blocks(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var mandal_blocksList = mandal_BlocksRepository.SearchMandal_Blocks(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var mandal_blocksList = mandal_BlocksRepository.SearchMandal_Blocks(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {mandal_blocksList?.Count()}");
                 return Ok(mandal_blocksList);
             }

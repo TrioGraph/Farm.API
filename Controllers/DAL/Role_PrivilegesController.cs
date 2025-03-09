@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IRole_PrivilegesRepository role_PrivilegesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Role_PrivilegesController> _logger;
-        public Role_PrivilegesController(IRole_PrivilegesRepository role_PrivilegesRepository, IMapper mapper, ILogger<Role_PrivilegesController> logger)
+	private IUtilityHelper utilityHelper;
+        public Role_PrivilegesController(IRole_PrivilegesRepository role_PrivilegesRepository, IMapper mapper, ILogger<Role_PrivilegesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.role_PrivilegesRepository = role_PrivilegesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllRole_Privileges")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchRole_Privileges")]
-        public async Task<IActionResult> SearchRole_Privileges(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchRole_Privileges(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var role_privilegesList = role_PrivilegesRepository.SearchRole_Privileges(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var role_privilegesList = role_PrivilegesRepository.SearchRole_Privileges(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {role_privilegesList?.Count()}");
                 return Ok(role_privilegesList);
             }

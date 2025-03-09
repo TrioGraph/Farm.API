@@ -48,7 +48,7 @@ namespace Farm.Models.Data
         public DbSet<Photos> Photos { get; set; }
         public DbSet<PlantationIdentification> PlantationIdentification { get; set; }
         public DbSet<Poaching_FFB> Poaching_FFB { get; set; }
-        public DbSet<Privileges> Privileges { get; set; }
+        public DbSet<Privileges> Privilege { get; set; }
         public DbSet<Referral_Source> Referral_Source { get; set; }
         public DbSet<Role_Privileges> Role_Privileges { get; set; }
         public DbSet<Roles> Roles { get; set; }
@@ -57,6 +57,10 @@ namespace Farm.Models.Data
         public DbSet<Training_Videos> Training_Videos { get; set; }
         public DbSet<Villages> Villages { get; set; }
         public DbSet<Workflow> Workflow { get; set; }
+        public DbSet<Nursary_Activity> Nursary_Activity { get; set; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<Users_Types> Users_Types { get; set; }
+
         public override int SaveChanges()
         {
             var AddedEntities = ChangeTracker.Entries().Where(E => E.State == EntityState.Added).ToList();
@@ -81,22 +85,27 @@ namespace Farm.Models.Data
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
         {
             var AddedEntities = ChangeTracker.Entries().Where(E => E.State == EntityState.Added).ToList();
-
-            AddedEntities.ForEach(E =>
+            try
             {
-                // E.Property("CreatedDate").CurrentValue = DateTime.Now;
-                // E.Property("CreatedBy").CurrentValue = 1;
-                // E.Property("Guid").CurrentValue = Guid.NewGuid().ToString();
-            });
+                AddedEntities.ForEach(E =>
+                {
+                    E.Property("CreatedDate").CurrentValue = DateTime.Now;
+                    E.Property("CreatedBy").CurrentValue = SessionData.UserId;
+                    // E.Property("Guid").CurrentValue = Guid.NewGuid().ToString();
+                });
 
-            var EditedEntities = ChangeTracker.Entries().Where(E => E.State == EntityState.Modified).ToList();
+                var EditedEntities = ChangeTracker.Entries().Where(E => E.State == EntityState.Modified).ToList();
 
-            EditedEntities.ForEach(E =>
+                EditedEntities.ForEach(E =>
+                {
+                    E.Property("UpdatedDate").CurrentValue = DateTime.Now;
+                    E.Property("UpdatedBy").CurrentValue = 1;
+                });
+            }
+            catch (Exception ex)
             {
-                // E.Property("UpdatedDate").CurrentValue = DateTime.Now;
-                // E.Property("UpdatedBy").CurrentValue = 1;
-            });
-
+                Console.WriteLine(ex.ToString());
+            }
             return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
 

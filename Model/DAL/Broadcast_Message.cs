@@ -1,6 +1,6 @@
 namespace Farm.Models
 {
-    public class Broadcast_Message
+    public class Broadcast_Message : EntityBase
     {
         public int? Id { get; set; }
 	  public string? Message_Text { get; set; }

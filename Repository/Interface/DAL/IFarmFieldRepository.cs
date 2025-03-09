@@ -9,7 +9,6 @@ namespace Farm.Repositories
         
         Task<IEnumerable<object>> GetFarmFieldLookup();
 		
-        Task<IEnumerable<object>> GetFarmFieldLookupByFarmerId(int farmerId);
         Task<FarmField> GetFarmFieldById(int id);
 
         Task<FarmField> CreateFarmField(FarmField appsPermissions);
@@ -20,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<FarmField>> DeleteFarmField(int roles);
        
-        Dictionary<string, object> SearchFarmField(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchFarmField(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

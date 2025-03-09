@@ -20,7 +20,7 @@ namespace Farm.Models
 	  public string? Mobile_Number1 { get; set; }
 	  public string? Mobile_Number2 { get; set; }
 	  public string? Lease_Code { get; set; }
-	  public int? Farmer_Photo_Id { get; set; }
+	  public string? Farmer_Photo_Id { get; set; }
 	  public string? Year { get; set; }
 	  public string? Family_Code { get; set; }
 	  public string? Scheme { get; set; }
@@ -44,7 +44,7 @@ namespace Farm.Models
 	  public string? Email { get; set; }
 	  public int? Supervisor_Id { get; set; }
 	  public string? Tally_FarmerCode { get; set; }
-	  public int? Land_Photo_Id { get; set; }
+	  public string? Land_Photo_Id { get; set; }
 	  public bool? IsActive { get; set; }
 	  
 

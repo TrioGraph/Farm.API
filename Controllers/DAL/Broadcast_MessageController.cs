@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IBroadcast_MessageRepository broadcast_MessageRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Broadcast_MessageController> _logger;
-        public Broadcast_MessageController(IBroadcast_MessageRepository broadcast_MessageRepository, IMapper mapper, ILogger<Broadcast_MessageController> logger)
+	private IUtilityHelper utilityHelper;
+        public Broadcast_MessageController(IBroadcast_MessageRepository broadcast_MessageRepository, IMapper mapper, ILogger<Broadcast_MessageController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.broadcast_MessageRepository = broadcast_MessageRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllBroadcast_Message")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchBroadcast_Message")]
-        public async Task<IActionResult> SearchBroadcast_Message(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchBroadcast_Message(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var broadcast_messageList = broadcast_MessageRepository.SearchBroadcast_Message(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var broadcast_messageList = broadcast_MessageRepository.SearchBroadcast_Message(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {broadcast_messageList?.Count()}");
                 return Ok(broadcast_messageList);
             }

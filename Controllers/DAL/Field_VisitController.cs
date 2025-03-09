@@ -12,13 +12,15 @@ namespace Farm.Controllers
     public class Field_VisitController : Controller
     {
         private readonly IField_VisitRepository field_VisitRepository;
+        private IUtilityHelper utilityHelper;
         private readonly IMapper mapper;
         private readonly ILogger<Field_VisitController> _logger;
-        public Field_VisitController(IField_VisitRepository field_VisitRepository, IMapper mapper, ILogger<Field_VisitController> logger)
+        public Field_VisitController(IField_VisitRepository field_VisitRepository, IMapper mapper, ILogger<Field_VisitController> logger, IUtilityHelper utilityHelper)
         {
             this.field_VisitRepository = field_VisitRepository;
             mapper = mapper;
             _logger = logger;
+            this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllField_Visit")]
@@ -177,7 +179,8 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var field_visitList = field_VisitRepository.SearchField_Visit(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+                string userId = utilityHelper.GetUserFromRequest(Request);
+                var field_visitList = field_VisitRepository.SearchField_Visit(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder);
                 _logger.LogInformation($"database call done successfully with {field_visitList?.Count()}");
                 return Ok(field_visitList);
             }

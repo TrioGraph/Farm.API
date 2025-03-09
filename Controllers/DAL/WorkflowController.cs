@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IWorkflowRepository workflowRepository;
         private readonly IMapper mapper;
         private readonly ILogger<WorkflowController> _logger;
-        public WorkflowController(IWorkflowRepository workflowRepository, IMapper mapper, ILogger<WorkflowController> logger)
+	private IUtilityHelper utilityHelper;
+        public WorkflowController(IWorkflowRepository workflowRepository, IMapper mapper, ILogger<WorkflowController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.workflowRepository = workflowRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllWorkflow")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchWorkflow")]
-        public async Task<IActionResult> SearchWorkflow(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchWorkflow(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var workflowList = workflowRepository.SearchWorkflow(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var workflowList = workflowRepository.SearchWorkflow(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {workflowList?.Count()}");
                 return Ok(workflowList);
             }

@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Photos>> DeletePhotos(int roles);
        
-        Dictionary<string, object> SearchPhotos(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchPhotos(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

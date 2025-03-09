@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly ITraining_VideosRepository training_VideosRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Training_VideosController> _logger;
-        public Training_VideosController(ITraining_VideosRepository training_VideosRepository, IMapper mapper, ILogger<Training_VideosController> logger)
+	private IUtilityHelper utilityHelper;
+        public Training_VideosController(ITraining_VideosRepository training_VideosRepository, IMapper mapper, ILogger<Training_VideosController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.training_VideosRepository = training_VideosRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllTraining_Videos")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchTraining_Videos")]
-        public async Task<IActionResult> SearchTraining_Videos(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchTraining_Videos(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var training_videosList = training_VideosRepository.SearchTraining_Videos(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var training_videosList = training_VideosRepository.SearchTraining_Videos(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {training_videosList?.Count()}");
                 return Ok(training_videosList);
             }

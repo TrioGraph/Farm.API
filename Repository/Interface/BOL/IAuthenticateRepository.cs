@@ -5,8 +5,11 @@ namespace Farm.Repositories
 {
     public interface IAuthenticateRepository
     {
-        Task<Employees> ValidateCredentials(string userName, string password);
+        Task<Users> ValidateCredentials(string userName, string password);
         Task<string[]> GetRole_PrivilegesByRole(int? roleId);
+
+        Task<object> GetLookupRecentUpdates();
+
 
     }
 }

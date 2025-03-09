@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Districts>> DeleteDistricts(int roles);
        
-        Dictionary<string, object> SearchDistricts(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchDistricts(int userId, SearchFields searchFields);
 
     }
 }

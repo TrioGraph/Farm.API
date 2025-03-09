@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IDocumentsRepository documentsRepository;
         private readonly IMapper mapper;
         private readonly ILogger<DocumentsController> _logger;
-        public DocumentsController(IDocumentsRepository documentsRepository, IMapper mapper, ILogger<DocumentsController> logger)
+	private IUtilityHelper utilityHelper;
+        public DocumentsController(IDocumentsRepository documentsRepository, IMapper mapper, ILogger<DocumentsController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.documentsRepository = documentsRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllDocuments")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchDocuments")]
-        public async Task<IActionResult> SearchDocuments(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchDocuments(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var documentsList = documentsRepository.SearchDocuments(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var documentsList = documentsRepository.SearchDocuments(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {documentsList?.Count()}");
                 return Ok(documentsList);
             }

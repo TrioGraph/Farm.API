@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IFarmer_login_visit_logsRepository farmer_login_visit_logsRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Farmer_login_visit_logsController> _logger;
-        public Farmer_login_visit_logsController(IFarmer_login_visit_logsRepository farmer_login_visit_logsRepository, IMapper mapper, ILogger<Farmer_login_visit_logsController> logger)
+	private IUtilityHelper utilityHelper;
+        public Farmer_login_visit_logsController(IFarmer_login_visit_logsRepository farmer_login_visit_logsRepository, IMapper mapper, ILogger<Farmer_login_visit_logsController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.farmer_login_visit_logsRepository = farmer_login_visit_logsRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllFarmer_login_visit_logs")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchFarmer_login_visit_logs")]
-        public async Task<IActionResult> SearchFarmer_login_visit_logs(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchFarmer_login_visit_logs(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var farmer_login_visit_logsList = farmer_login_visit_logsRepository.SearchFarmer_login_visit_logs(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var farmer_login_visit_logsList = farmer_login_visit_logsRepository.SearchFarmer_login_visit_logs(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {farmer_login_visit_logsList?.Count()}");
                 return Ok(farmer_login_visit_logsList);
             }

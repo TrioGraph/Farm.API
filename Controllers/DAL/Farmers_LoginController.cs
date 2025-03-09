@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IFarmers_LoginRepository farmers_LoginRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Farmers_LoginController> _logger;
-        public Farmers_LoginController(IFarmers_LoginRepository farmers_LoginRepository, IMapper mapper, ILogger<Farmers_LoginController> logger)
+	private IUtilityHelper utilityHelper;
+        public Farmers_LoginController(IFarmers_LoginRepository farmers_LoginRepository, IMapper mapper, ILogger<Farmers_LoginController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.farmers_LoginRepository = farmers_LoginRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllFarmers_Login")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchFarmers_Login")]
-        public async Task<IActionResult> SearchFarmers_Login(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchFarmers_Login(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var farmers_loginList = farmers_LoginRepository.SearchFarmers_Login(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var farmers_loginList = farmers_LoginRepository.SearchFarmers_Login(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {farmers_loginList?.Count()}");
                 return Ok(farmers_loginList);
             }

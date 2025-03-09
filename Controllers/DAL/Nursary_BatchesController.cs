@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly INursary_BatchesRepository nursary_BatchesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Nursary_BatchesController> _logger;
-        public Nursary_BatchesController(INursary_BatchesRepository nursary_BatchesRepository, IMapper mapper, ILogger<Nursary_BatchesController> logger)
+	private IUtilityHelper utilityHelper;
+        public Nursary_BatchesController(INursary_BatchesRepository nursary_BatchesRepository, IMapper mapper, ILogger<Nursary_BatchesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.nursary_BatchesRepository = nursary_BatchesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllNursary_Batches")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchNursary_Batches")]
-        public async Task<IActionResult> SearchNursary_Batches(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchNursary_Batches(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var nursary_batchesList = nursary_BatchesRepository.SearchNursary_Batches(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var nursary_batchesList = nursary_BatchesRepository.SearchNursary_Batches(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {nursary_batchesList?.Count()}");
                 return Ok(nursary_batchesList);
             }

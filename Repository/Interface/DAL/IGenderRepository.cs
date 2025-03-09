@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Gender>> DeleteGender(int roles);
        
-        Dictionary<string, object> SearchGender(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchGender(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

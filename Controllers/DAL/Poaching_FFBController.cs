@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IPoaching_FFBRepository poaching_FFBRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Poaching_FFBController> _logger;
-        public Poaching_FFBController(IPoaching_FFBRepository poaching_FFBRepository, IMapper mapper, ILogger<Poaching_FFBController> logger)
+	private IUtilityHelper utilityHelper;
+        public Poaching_FFBController(IPoaching_FFBRepository poaching_FFBRepository, IMapper mapper, ILogger<Poaching_FFBController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.poaching_FFBRepository = poaching_FFBRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllPoaching_FFB")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchPoaching_FFB")]
-        public async Task<IActionResult> SearchPoaching_FFB(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchPoaching_FFB(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var poaching_ffbList = poaching_FFBRepository.SearchPoaching_FFB(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var poaching_ffbList = poaching_FFBRepository.SearchPoaching_FFB(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {poaching_ffbList?.Count()}");
                 return Ok(poaching_ffbList);
             }

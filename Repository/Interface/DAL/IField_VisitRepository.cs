@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Field_Visit>> DeleteField_Visit(int roles);
        
-        Dictionary<string, object> SearchField_Visit(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchField_Visit(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
 
     }
 }

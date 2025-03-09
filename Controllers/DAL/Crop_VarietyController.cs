@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly ICrop_VarietyRepository crop_VarietyRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Crop_VarietyController> _logger;
-        public Crop_VarietyController(ICrop_VarietyRepository crop_VarietyRepository, IMapper mapper, ILogger<Crop_VarietyController> logger)
+	private IUtilityHelper utilityHelper;
+        public Crop_VarietyController(ICrop_VarietyRepository crop_VarietyRepository, IMapper mapper, ILogger<Crop_VarietyController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.crop_VarietyRepository = crop_VarietyRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllCrop_Variety")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchCrop_Variety")]
-        public async Task<IActionResult> SearchCrop_Variety(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchCrop_Variety(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var crop_varietyList = crop_VarietyRepository.SearchCrop_Variety(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var crop_varietyList = crop_VarietyRepository.SearchCrop_Variety(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {crop_varietyList?.Count()}");
                 return Ok(crop_varietyList);
             }

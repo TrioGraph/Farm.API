@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IFarmer_trip_sheetsRepository farmer_trip_sheetsRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Farmer_trip_sheetsController> _logger;
-        public Farmer_trip_sheetsController(IFarmer_trip_sheetsRepository farmer_trip_sheetsRepository, IMapper mapper, ILogger<Farmer_trip_sheetsController> logger)
+	private IUtilityHelper utilityHelper;
+        public Farmer_trip_sheetsController(IFarmer_trip_sheetsRepository farmer_trip_sheetsRepository, IMapper mapper, ILogger<Farmer_trip_sheetsController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.farmer_trip_sheetsRepository = farmer_trip_sheetsRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllFarmer_trip_sheets")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchFarmer_trip_sheets")]
-        public async Task<IActionResult> SearchFarmer_trip_sheets(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchFarmer_trip_sheets(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var farmer_trip_sheetsList = farmer_trip_sheetsRepository.SearchFarmer_trip_sheets(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var farmer_trip_sheetsList = farmer_trip_sheetsRepository.SearchFarmer_trip_sheets(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {farmer_trip_sheetsList?.Count()}");
                 return Ok(farmer_trip_sheetsList);
             }

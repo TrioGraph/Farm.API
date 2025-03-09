@@ -14,11 +14,15 @@ namespace Farm.Controllers
         private readonly IPlantationIdentificationRepository plantationIdentificationRepository;
         private readonly IMapper mapper;
         private readonly ILogger<PlantationIdentificationController> _logger;
-        public PlantationIdentificationController(IPlantationIdentificationRepository plantationIdentificationRepository, IMapper mapper, ILogger<PlantationIdentificationController> logger)
+
+        private IUtilityHelper utilityHelper;
+        public PlantationIdentificationController(IPlantationIdentificationRepository plantationIdentificationRepository, IMapper mapper, ILogger<PlantationIdentificationController> logger,
+        IUtilityHelper utilityHelper)
         {
             this.plantationIdentificationRepository = plantationIdentificationRepository;
             mapper = mapper;
             _logger = logger;
+            this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllPlantationIdentification")]
@@ -168,7 +172,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchPlantationIdentification")]
-        public async Task<IActionResult> SearchPlantationIdentification(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchPlantationIdentification(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +182,11 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var plantationidentificationList = plantationIdentificationRepository.SearchPlantationIdentification(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+                string userId = utilityHelper.GetUserFromRequest(Request);
+                var plantationidentificationList = plantationIdentificationRepository.
+                        SearchPlantationIdentification(int.Parse(userId),
+                        searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {plantationidentificationList?.Count()}");
                 return Ok(plantationidentificationList);
             }

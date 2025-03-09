@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IReferral_SourceRepository referral_SourceRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Referral_SourceController> _logger;
-        public Referral_SourceController(IReferral_SourceRepository referral_SourceRepository, IMapper mapper, ILogger<Referral_SourceController> logger)
+	private IUtilityHelper utilityHelper;
+        public Referral_SourceController(IReferral_SourceRepository referral_SourceRepository, IMapper mapper, ILogger<Referral_SourceController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.referral_SourceRepository = referral_SourceRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllReferral_Source")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchReferral_Source")]
-        public async Task<IActionResult> SearchReferral_Source(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchReferral_Source(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var referral_sourceList = referral_SourceRepository.SearchReferral_Source(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var referral_sourceList = referral_SourceRepository.SearchReferral_Source(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {referral_sourceList?.Count()}");
                 return Ok(referral_sourceList);
             }

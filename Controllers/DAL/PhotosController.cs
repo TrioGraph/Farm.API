@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IPhotosRepository photosRepository;
         private readonly IMapper mapper;
         private readonly ILogger<PhotosController> _logger;
-        public PhotosController(IPhotosRepository photosRepository, IMapper mapper, ILogger<PhotosController> logger)
+	private IUtilityHelper utilityHelper;
+        public PhotosController(IPhotosRepository photosRepository, IMapper mapper, ILogger<PhotosController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.photosRepository = photosRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllPhotos")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchPhotos")]
-        public async Task<IActionResult> SearchPhotos(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchPhotos(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var photosList = photosRepository.SearchPhotos(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var photosList = photosRepository.SearchPhotos(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {photosList?.Count()}");
                 return Ok(photosList);
             }

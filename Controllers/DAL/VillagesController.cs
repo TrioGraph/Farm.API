@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IVillagesRepository villagesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<VillagesController> _logger;
-        public VillagesController(IVillagesRepository villagesRepository, IMapper mapper, ILogger<VillagesController> logger)
+	private IUtilityHelper utilityHelper;
+        public VillagesController(IVillagesRepository villagesRepository, IMapper mapper, ILogger<VillagesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.villagesRepository = villagesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllVillages")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchVillages")]
-        public async Task<IActionResult> SearchVillages(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchVillages(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var villagesList = villagesRepository.SearchVillages(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var villagesList = villagesRepository.SearchVillages(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {villagesList?.Count()}");
                 return Ok(villagesList);
             }

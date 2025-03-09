@@ -19,12 +19,12 @@ namespace Farm.Repositories
 
         public async Task<List<Privileges>> GetAllPrivileges()
         {
-            return await FarmDbContext.Privileges.OrderByDescending(d => d.Id).ToListAsync();
+            return await FarmDbContext.Privilege.OrderByDescending(d => d.Id).ToListAsync();
         }
 
         public async Task<IEnumerable<object>> GetPrivilegesLookup()
         {
-            return await FarmDbContext.Privileges
+            return await FarmDbContext.Privilege
             .Select(s => new
             {
                 Id = s.Id,
@@ -34,7 +34,7 @@ namespace Farm.Repositories
 
         public async Task<Privileges> GetPrivilegesById(int id)
         {
-            return await FarmDbContext.Privileges.FirstOrDefaultAsync(x => x.Id == id);
+            return await FarmDbContext.Privilege.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<Privileges> CreatePrivileges(Privileges privileges)
@@ -43,12 +43,12 @@ namespace Farm.Repositories
             await FarmDbContext.AddRangeAsync(privileges);
             await FarmDbContext.SaveChangesAsync();
 
-            return this.FarmDbContext.Privileges.First(a => a.Id == privileges.Id);
+            return this.FarmDbContext.Privilege.First(a => a.Id == privileges.Id);
         }
 
         public async Task<Privileges> UpdatePrivileges(int Id, Privileges privileges)
         {
-            var privilegesDetails = await FarmDbContext.Privileges.FirstOrDefaultAsync(x => x.Id == Id);
+            var privilegesDetails = await FarmDbContext.Privilege.FirstOrDefaultAsync(x => x.Id == Id);
             if (privilegesDetails == null)
             {
                 return null;
@@ -60,32 +60,32 @@ namespace Farm.Repositories
             }
             privilegesDetails.Id = Id;
             await FarmDbContext.SaveChangesAsync();
-            return this.FarmDbContext.Privileges.First(a => a.Id == privilegesDetails.Id);
+            return this.FarmDbContext.Privilege.First(a => a.Id == privilegesDetails.Id);
         }
 
 	  public async Task<IEnumerable<Privileges>> DeletePrivileges(int id)
       {
-            var list = await FarmDbContext.Privileges.Where(s => id == s.Id).ToListAsync();
-            FarmDbContext.Privileges.RemoveRange(list);
+            var list = await FarmDbContext.Privilege.Where(s => id == s.Id).ToListAsync();
+            FarmDbContext.Privilege.RemoveRange(list);
             await FarmDbContext.SaveChangesAsync();
             return list;
       }
 
 	public async Task<Privileges> UpdatePrivilegesStatus(int Id)
         {
-            var privilegesDetails = await FarmDbContext.Privileges.FirstOrDefaultAsync(x => x.Id == Id);
+            var privilegesDetails = await FarmDbContext.Privilege.FirstOrDefaultAsync(x => x.Id == Id);
             if (privilegesDetails == null)
             {
                 return null;
             }
             privilegesDetails.IsActive = false;
             await FarmDbContext.SaveChangesAsync();
-            return this.FarmDbContext.Privileges.First(a => a.Id == privilegesDetails.Id);
+            return this.FarmDbContext.Privilege.First(a => a.Id == privilegesDetails.Id);
         }
 
       private int GetNextId()
       {
-        int? maxId = FarmDbContext.Privileges.Max(p => p.Id);
+        int? maxId = FarmDbContext.Privilege.Max(p => p.Id);
         if (maxId == null)
         {
             maxId = 0;
@@ -93,7 +93,7 @@ namespace Farm.Repositories
         return ((int)maxId + 3);
       }
 
-public Dictionary<string, object> SearchPrivileges(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection)
+public Dictionary<string, object> SearchPrivileges(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             Dictionary<string, object> result = new Dictionary<string, object>();
             try
@@ -104,11 +104,18 @@ public Dictionary<string, object> SearchPrivileges(string searchString, int page
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 //Add the parameter to the Parameters property of SqlCommand object
                 adapter.SelectCommand = new SqlCommand("GetSearchPrivileges", new SqlConnection(ConnectionString));
+		adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@userId", SqlDbType = SqlDbType.VarChar, Value = userId, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@txt", SqlDbType = SqlDbType.VarChar, Value = searchString, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageIndex", SqlDbType = SqlDbType.VarChar, Value = pageNumber, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageSize", SqlDbType = SqlDbType.VarChar, Value = pageSize, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@sortColumn", SqlDbType = SqlDbType.VarChar, Value = sortColumn, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@sortDirection", SqlDbType = SqlDbType.VarChar, Value = sortDirection, Direction = ParameterDirection.Input });
+		adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@isColumnSearch", SqlDbType = SqlDbType.Bit, Value = isColumnSearch, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@columnName", SqlDbType = SqlDbType.VarChar, Value = columnName, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@columnDataType", SqlDbType = SqlDbType.VarChar, Value = columnDataType, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@operator", SqlDbType = SqlDbType.VarChar, Value = operatorType, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@value1", SqlDbType = SqlDbType.VarChar, Value = value1, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@value2", SqlDbType = SqlDbType.VarChar, Value = value2, Direction = ParameterDirection.Input });
 
                 adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 adapter.Fill(dataset);

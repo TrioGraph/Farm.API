@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IFarm_DiseasesRepository farm_DiseasesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Farm_DiseasesController> _logger;
-        public Farm_DiseasesController(IFarm_DiseasesRepository farm_DiseasesRepository, IMapper mapper, ILogger<Farm_DiseasesController> logger)
+	private IUtilityHelper utilityHelper;
+        public Farm_DiseasesController(IFarm_DiseasesRepository farm_DiseasesRepository, IMapper mapper, ILogger<Farm_DiseasesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.farm_DiseasesRepository = farm_DiseasesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllFarm_Diseases")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchFarm_Diseases")]
-        public async Task<IActionResult> SearchFarm_Diseases(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchFarm_Diseases(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var farm_diseasesList = farm_DiseasesRepository.SearchFarm_Diseases(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var farm_diseasesList = farm_DiseasesRepository.SearchFarm_Diseases(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {farm_diseasesList?.Count()}");
                 return Ok(farm_diseasesList);
             }

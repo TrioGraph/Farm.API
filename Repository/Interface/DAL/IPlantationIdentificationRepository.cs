@@ -19,7 +19,8 @@ namespace Farm.Repositories
 
         Task<IEnumerable<PlantationIdentification>> DeletePlantationIdentification(int roles);
        
-        Dictionary<string, object> SearchPlantationIdentification(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchPlantationIdentification(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection,
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

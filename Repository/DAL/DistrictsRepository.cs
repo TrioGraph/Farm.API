@@ -54,7 +54,7 @@ namespace Farm.Repositories
                 return null;
             }
             System.Reflection.PropertyInfo[] propertiesInfo = districtsDetails.GetType().GetProperties();
-            foreach(System.Reflection.PropertyInfo propInfo in propertiesInfo)
+            foreach (System.Reflection.PropertyInfo propInfo in propertiesInfo)
             {
                 propInfo.SetValue(districtsDetails, districts.GetType().GetProperty(propInfo.Name).GetValue(districts));
             }
@@ -63,15 +63,15 @@ namespace Farm.Repositories
             return this.FarmDbContext.Districts.First(a => a.Id == districtsDetails.Id);
         }
 
-	  public async Task<IEnumerable<Districts>> DeleteDistricts(int id)
-      {
+        public async Task<IEnumerable<Districts>> DeleteDistricts(int id)
+        {
             var list = await FarmDbContext.Districts.Where(s => id == s.Id).ToListAsync();
             FarmDbContext.Districts.RemoveRange(list);
             await FarmDbContext.SaveChangesAsync();
             return list;
-      }
+        }
 
-	public async Task<Districts> UpdateDistrictsStatus(int Id)
+        public async Task<Districts> UpdateDistrictsStatus(int Id)
         {
             var districtsDetails = await FarmDbContext.Districts.FirstOrDefaultAsync(x => x.Id == Id);
             if (districtsDetails == null)
@@ -83,17 +83,17 @@ namespace Farm.Repositories
             return this.FarmDbContext.Districts.First(a => a.Id == districtsDetails.Id);
         }
 
-      private int GetNextId()
-      {
-        int? maxId = FarmDbContext.Districts.Max(p => p.Id);
-        if (maxId == null)
+        private int GetNextId()
         {
-            maxId = 0;
+            int? maxId = FarmDbContext.Districts.Max(p => p.Id);
+            if (maxId == null)
+            {
+                maxId = 0;
+            }
+            return ((int)maxId + 3);
         }
-        return ((int)maxId + 3);
-      }
 
-public Dictionary<string, object> SearchDistricts(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection)
+        public Dictionary<string, object> SearchDistricts(int userId, SearchFields searchFields)
         {
             Dictionary<string, object> result = new Dictionary<string, object>();
             try
@@ -104,12 +104,41 @@ public Dictionary<string, object> SearchDistricts(string searchString, int pageN
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 //Add the parameter to the Parameters property of SqlCommand object
                 adapter.SelectCommand = new SqlCommand("GetSearchDistricts", new SqlConnection(ConnectionString));
-                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@txt", SqlDbType = SqlDbType.VarChar, Value = searchString, Direction = ParameterDirection.Input });
-                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageIndex", SqlDbType = SqlDbType.VarChar, Value = pageNumber, Direction = ParameterDirection.Input });
-                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageSize", SqlDbType = SqlDbType.VarChar, Value = pageSize, Direction = ParameterDirection.Input });
-                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@sortColumn", SqlDbType = SqlDbType.VarChar, Value = sortColumn, Direction = ParameterDirection.Input });
-                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@sortDirection", SqlDbType = SqlDbType.VarChar, Value = sortDirection, Direction = ParameterDirection.Input });
 
+                DataTable filtersDT = new DataTable();
+                //Add Columns
+                filtersDT.Columns.Add("ColumnName");
+                filtersDT.Columns.Add("ColumnDataType");
+                filtersDT.Columns.Add("Operator");
+                filtersDT.Columns.Add("Value1");
+                filtersDT.Columns.Add("Value2");
+                filtersDT.Columns.Add("LogicalCondition");
+                //Add rows
+                for(int i = 0; i < searchFields.Filters.Length;i++)
+                {
+                    filtersDT.Rows.Add(searchFields.Filters[i].ColumnName, searchFields.Filters[i].ColumnDataType, searchFields.Filters[i].Operator, searchFields.Filters[i].Value1, searchFields.Filters[i].Value2, searchFields.Filters[i].LogicalCondition);
+                }
+
+                string searchText = searchFields.SearchPatterns.SearchText;
+                int pageNumber = (int)searchFields.SearchPatterns.PageIndex;
+                int pageSize = (int)searchFields.SearchPatterns.PageSize;
+                string sortColumn = searchFields.SearchPatterns.SortColumn;
+                string sortOrder = searchFields.SearchPatterns.SortDirection;
+                 DataTable SearchPatternsDT = new DataTable();
+                //Add Columns
+                SearchPatternsDT.Columns.Add("SearchText");
+                SearchPatternsDT.Columns.Add("PageNumber");
+                SearchPatternsDT.Columns.Add("PageSize");
+                SearchPatternsDT.Columns.Add("SortColumn");
+                SearchPatternsDT.Columns.Add("SortOrder");
+                searchText = searchText.Replace("\"", string.Empty);
+                //Add rows
+                SearchPatternsDT.Rows.Add(searchText ?? "", pageNumber, pageSize, sortColumn ?? "m.Id", sortOrder ?? "DESC");
+
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@userId", SqlDbType = SqlDbType.VarChar, Value = userId, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@Filters", SqlDbType = SqlDbType.Structured, Value = filtersDT, Direction = ParameterDirection.Input });
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@SearchPatterns", SqlDbType = SqlDbType.Structured, Value = SearchPatternsDT, Direction = ParameterDirection.Input  });
+                
                 adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                 adapter.Fill(dataset);
                 Dictionary<string, string> tempRecord = new Dictionary<string, string>();
@@ -138,5 +167,5 @@ public Dictionary<string, object> SearchDistricts(string searchString, int pageN
 
             return result;
         }
-}
+    }
 }

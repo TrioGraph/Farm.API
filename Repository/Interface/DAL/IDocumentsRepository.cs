@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Documents>> DeleteDocuments(int roles);
        
-        Dictionary<string, object> SearchDocuments(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchDocuments(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

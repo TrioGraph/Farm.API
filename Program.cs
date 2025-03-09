@@ -1,39 +1,64 @@
 using Farm.Models.Data;
 using Farm.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Farm.Controllers;
 
 // using Farm.API.Models.Data;
 // using Starter.API.Repositories;
 // using Starter.API.Service;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.Limits.MaxRequestBodySize = null; // NOTE: set upload limit to unlimited, or specify the limit in number of bytes
+});
+// NOTE: set a very large limit for multipart/form-data encoded forms; this should be added regardless of setting the limit for a controller, action or the whole server
+builder.Services.Configure<FormOptions>(options => options.MultipartBodyLengthLimit = long.MaxValue);
+
 ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
 {
     builder.AddConsole();
     builder.AddDebug();
 });
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = "Code2night", // Replace with your issuer
-            ValidAudience = "Public", // Replace with your audience
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("C1CF4B7DC4C4175B6618DE4F55CA4"))  // Replace with your secret key
-    };
-});
+
+// builder.Services.AddAuthentication().AddCookie();
+
+// builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//     .AddJwtBearer(options =>
+//     {
+//         options.TokenValidationParameters = new TokenValidationParameters
+//         {
+//             ValidateIssuer = true,
+//             ValidateAudience = true,
+//             ValidateLifetime = true,
+//             ValidateIssuerSigningKey = true,
+//             ValidIssuer = "FamrAPI", // Replace with your issuer
+//             ValidAudience = "Public", // Replace with your audience
+//             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("C1CF4B7DC4C4175B6618DE4F55CA4"))  // Replace with your secret key
+//     };
+// });
+
+// builder.Services.AddAuthorization(options =>
+// {
+//     options.AddPolicy("ViewEmployee",
+//         policy => policy.RequireClaim("View Employee")
+//                         .RequireClaim("View Employee"));
+// });
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// builder.Services.AddControllers(config =>
+// {
+//     config.Filters.Add<AuthorizeRoleAttribute>();
+// });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -76,6 +101,12 @@ builder.Services.AddScoped <ITraining_VideosRepository,Training_VideosRepository
 builder.Services.AddScoped <IVillagesRepository,VillagesRepository>();
 builder.Services.AddScoped <IWorkflowRepository,WorkflowRepository>();
 builder.Services.AddScoped <IAuthenticateRepository,AuthenticateRepository>();
+builder.Services.AddScoped <IUtilityHelper,UtilityHelper>();
+builder.Services.AddScoped <INursary_ActivityRepository,Nursary_ActivityRepository>();
+builder.Services.AddScoped <IUsersRepository,UsersRepository>();
+builder.Services.AddScoped <IUsers_TypesRepository,Users_TypesRepository>();
+
+builder.Services.AddTransient<AuthorizationMiddleware>();
 
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
@@ -100,6 +131,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+app.UseMiddleware<AuthenticationMiddleware>();
+app.UseMiddleware<AuthorizationMiddleware>();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -121,8 +155,8 @@ if (app.Environment.IsDevelopment())
         });
     }
     app.UseDeveloperExceptionPage();
-    app.UseAuthentication();
-    app.UseAuthorization();
+    // app.UseAuthentication();
+    // app.UseAuthorization();
     app.MapControllers();
 
     app.UseCors("allow-cors");
@@ -130,7 +164,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+// app.UseAuthorization();
 
 app.MapControllers();
 

@@ -1,0 +1,6892 @@
+[
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "CreateAuthorisation",
+    "RelativePath": "AddAuthorisation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AuthorisationDetails",
+        "Type": "Farm.Models.Authorisation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "CreateBroadcast_Message",
+    "RelativePath": "AddBroadcast_Message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Broadcast_MessageDetails",
+        "Type": "Farm.Models.Broadcast_Message",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "CreateCampaign_Types",
+    "RelativePath": "AddCampaign_Types",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Campaign_TypesDetails",
+        "Type": "Farm.Models.Campaign_Types",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "CreateCampaigns",
+    "RelativePath": "AddCampaigns",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CampaignsDetails",
+        "Type": "Farm.Models.Campaigns",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "CreateCrop_Variety",
+    "RelativePath": "AddCrop_Variety",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Crop_VarietyDetails",
+        "Type": "Farm.Models.Crop_Variety",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "CreateDistricts",
+    "RelativePath": "AddDistricts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DistrictsDetails",
+        "Type": "Farm.Models.Districts",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "CreateDocument_Type",
+    "RelativePath": "AddDocument_Type",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Document_TypeDetails",
+        "Type": "Farm.Models.Document_Type",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "CreateDocuments",
+    "RelativePath": "AddDocuments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DocumentsDetails",
+        "Type": "Farm.Models.Documents",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "CreateEmployee_Roles",
+    "RelativePath": "AddEmployee_Roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Employee_RolesDetails",
+        "Type": "Farm.Models.Employee_Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "CreateEmployee_Types",
+    "RelativePath": "AddEmployee_Types",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Employee_TypesDetails",
+        "Type": "Farm.Models.Employee_Types",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "CreateEmployees",
+    "RelativePath": "AddEmployees",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmployeesDetails",
+        "Type": "Farm.Models.Employees",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "CreateFarm_Diseases",
+    "RelativePath": "AddFarm_Diseases",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Farm_DiseasesDetails",
+        "Type": "Farm.Models.Farm_Diseases",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "CreateFarmer_Group",
+    "RelativePath": "AddFarmer_Group",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Farmer_GroupDetails",
+        "Type": "Farm.Models.Farmer_Group",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "CreateFarmer_login_visit_logs",
+    "RelativePath": "AddFarmer_login_visit_logs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Farmer_login_visit_logsDetails",
+        "Type": "Farm.Models.Farmer_login_visit_logs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "CreateFarmer_trip_sheets",
+    "RelativePath": "AddFarmer_trip_sheets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Farmer_trip_sheetsDetails",
+        "Type": "Farm.Models.Farmer_trip_sheets",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "CreateFarmers",
+    "RelativePath": "AddFarmers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FarmersDetails",
+        "Type": "Farm.Models.Farmers",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "CreateFarmers_Login",
+    "RelativePath": "AddFarmers_Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Farmers_LoginDetails",
+        "Type": "Farm.Models.Farmers_Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "CreateFarmField",
+    "RelativePath": "AddFarmField",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FarmFieldDetails",
+        "Type": "Farm.Models.FarmField",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "CreateField_Visit",
+    "RelativePath": "AddField_Visit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Field_VisitDetails",
+        "Type": "Farm.Models.Field_Visit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "CreateGender",
+    "RelativePath": "AddGender",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "GenderDetails",
+        "Type": "Farm.Models.Gender",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "CreateLogins",
+    "RelativePath": "AddLogins",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LoginsDetails",
+        "Type": "Farm.Models.Logins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "CreateLogins_Log",
+    "RelativePath": "AddLogins_Log",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Logins_LogDetails",
+        "Type": "Farm.Models.Logins_Log",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "CreateMandal_Blocks",
+    "RelativePath": "AddMandal_Blocks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Mandal_BlocksDetails",
+        "Type": "Farm.Models.Mandal_Blocks",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "CreateNursary",
+    "RelativePath": "AddNursary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NursaryDetails",
+        "Type": "Farm.Models.Nursary",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "CreateNursary_Activity",
+    "RelativePath": "AddNursary_Activity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nursary_ActivityDetails",
+        "Type": "Farm.Models.Nursary_Activity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "CreateNursary_Batches",
+    "RelativePath": "AddNursary_Batches",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nursary_BatchesDetails",
+        "Type": "Farm.Models.Nursary_Batches",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "CreatePhotos",
+    "RelativePath": "AddPhotos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PhotosDetails",
+        "Type": "Farm.Models.Photos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "CreatePlantationIdentification",
+    "RelativePath": "AddPlantationIdentification",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PlantationIdentificationDetails",
+        "Type": "Farm.Models.PlantationIdentification",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "CreatePoaching_FFB",
+    "RelativePath": "AddPoaching_FFB",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Poaching_FFBDetails",
+        "Type": "Farm.Models.Poaching_FFB",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "CreatePrivileges",
+    "RelativePath": "AddPrivileges",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PrivilegesDetails",
+        "Type": "Farm.Models.Privileges",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "CreateReferral_Source",
+    "RelativePath": "AddReferral_Source",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Referral_SourceDetails",
+        "Type": "Farm.Models.Referral_Source",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "CreateRole_Privileges",
+    "RelativePath": "AddRole_Privileges",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Role_PrivilegesDetails",
+        "Type": "Farm.Models.Role_Privileges",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "CreateRoles",
+    "RelativePath": "AddRoles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "RolesDetails",
+        "Type": "Farm.Models.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "CreateStates",
+    "RelativePath": "AddStates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StatesDetails",
+        "Type": "Farm.Models.States",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "CreateTraining_Videos",
+    "RelativePath": "AddTraining_Videos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Training_VideosDetails",
+        "Type": "Farm.Models.Training_Videos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "CreateUsers",
+    "RelativePath": "AddUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UsersDetails",
+        "Type": "Farm.Models.Users",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "CreateUsers_Types",
+    "RelativePath": "AddUsers_Types",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Users_TypesDetails",
+        "Type": "Farm.Models.Users_Types",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "CreateVillages",
+    "RelativePath": "AddVillages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "VillagesDetails",
+        "Type": "Farm.Models.Villages",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "CreateWorkflow",
+    "RelativePath": "AddWorkflow",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WorkflowDetails",
+        "Type": "Farm.Models.Workflow",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "GetAuthorisationById",
+    "RelativePath": "Authorisation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "UpdateAuthorisation",
+    "RelativePath": "Authorisation/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Authorisation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "DeleteAuthorisation",
+    "RelativePath": "Authorisation/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "UpdateAuthorisationStatus",
+    "RelativePath": "Authorisation/UpdateAuthorisationStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "GetBroadcast_MessageById",
+    "RelativePath": "Broadcast_Message",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "UpdateBroadcast_Message",
+    "RelativePath": "Broadcast_Message/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Broadcast_Message",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "DeleteBroadcast_Message",
+    "RelativePath": "Broadcast_Message/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "UpdateBroadcast_MessageStatus",
+    "RelativePath": "Broadcast_Message/UpdateBroadcast_MessageStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "GetCampaign_TypesById",
+    "RelativePath": "Campaign_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "UpdateCampaign_Types",
+    "RelativePath": "Campaign_Types/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Campaign_Types",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "DeleteCampaign_Types",
+    "RelativePath": "Campaign_Types/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "UpdateCampaign_TypesStatus",
+    "RelativePath": "Campaign_Types/UpdateCampaign_TypesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "GetCampaignsById",
+    "RelativePath": "Campaigns",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "UpdateCampaigns",
+    "RelativePath": "Campaigns/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Campaigns",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "DeleteCampaigns",
+    "RelativePath": "Campaigns/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "UpdateCampaignsStatus",
+    "RelativePath": "Campaigns/UpdateCampaignsStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "GetCrop_VarietyById",
+    "RelativePath": "Crop_Variety",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "UpdateCrop_Variety",
+    "RelativePath": "Crop_Variety/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Crop_Variety",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "DeleteCrop_Variety",
+    "RelativePath": "Crop_Variety/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "UpdateCrop_VarietyStatus",
+    "RelativePath": "Crop_Variety/UpdateCrop_VarietyStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "GetDistrictsById",
+    "RelativePath": "Districts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "UpdateDistricts",
+    "RelativePath": "Districts/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Districts",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "DeleteDistricts",
+    "RelativePath": "Districts/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "UpdateDistrictsStatus",
+    "RelativePath": "Districts/UpdateDistrictsStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "GetDocument_TypeById",
+    "RelativePath": "Document_Type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "UpdateDocument_Type",
+    "RelativePath": "Document_Type/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Document_Type",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "DeleteDocument_Type",
+    "RelativePath": "Document_Type/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "UpdateDocument_TypeStatus",
+    "RelativePath": "Document_Type/UpdateDocument_TypeStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "GetDocumentsById",
+    "RelativePath": "Documents",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "UpdateDocuments",
+    "RelativePath": "Documents/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Documents",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "DeleteDocuments",
+    "RelativePath": "Documents/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "UpdateDocumentsStatus",
+    "RelativePath": "Documents/UpdateDocumentsStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "GetEmployee_RolesById",
+    "RelativePath": "Employee_Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "UpdateEmployee_Roles",
+    "RelativePath": "Employee_Roles/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Employee_Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "DeleteEmployee_Roles",
+    "RelativePath": "Employee_Roles/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "UpdateEmployee_RolesStatus",
+    "RelativePath": "Employee_Roles/UpdateEmployee_RolesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "GetEmployee_TypesById",
+    "RelativePath": "Employee_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "UpdateEmployee_Types",
+    "RelativePath": "Employee_Types/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Employee_Types",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "DeleteEmployee_Types",
+    "RelativePath": "Employee_Types/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "UpdateEmployee_TypesStatus",
+    "RelativePath": "Employee_Types/UpdateEmployee_TypesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "GetEmployeesById",
+    "RelativePath": "Employees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "UpdateEmployees",
+    "RelativePath": "Employees/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Employees",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "DeleteEmployees",
+    "RelativePath": "Employees/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "UpdateEmployeesStatus",
+    "RelativePath": "Employees/UpdateEmployeesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "GetFarm_DiseasesById",
+    "RelativePath": "Farm_Diseases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "UpdateFarm_Diseases",
+    "RelativePath": "Farm_Diseases/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Farm_Diseases",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "DeleteFarm_Diseases",
+    "RelativePath": "Farm_Diseases/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "UpdateFarm_DiseasesStatus",
+    "RelativePath": "Farm_Diseases/UpdateFarm_DiseasesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "GetFarmer_GroupById",
+    "RelativePath": "Farmer_Group",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "UpdateFarmer_Group",
+    "RelativePath": "Farmer_Group/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Farmer_Group",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "DeleteFarmer_Group",
+    "RelativePath": "Farmer_Group/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "UpdateFarmer_GroupStatus",
+    "RelativePath": "Farmer_Group/UpdateFarmer_GroupStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "GetFarmer_login_visit_logsById",
+    "RelativePath": "Farmer_login_visit_logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "UpdateFarmer_login_visit_logs",
+    "RelativePath": "Farmer_login_visit_logs/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Farmer_login_visit_logs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "DeleteFarmer_login_visit_logs",
+    "RelativePath": "Farmer_login_visit_logs/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "UpdateFarmer_login_visit_logsStatus",
+    "RelativePath": "Farmer_login_visit_logs/UpdateFarmer_login_visit_logsStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "GetFarmer_trip_sheetsById",
+    "RelativePath": "Farmer_trip_sheets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "UpdateFarmer_trip_sheets",
+    "RelativePath": "Farmer_trip_sheets/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Farmer_trip_sheets",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "DeleteFarmer_trip_sheets",
+    "RelativePath": "Farmer_trip_sheets/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "UpdateFarmer_trip_sheetsStatus",
+    "RelativePath": "Farmer_trip_sheets/UpdateFarmer_trip_sheetsStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "GetFarmersById",
+    "RelativePath": "Farmers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "GetFarmers_LoginById",
+    "RelativePath": "Farmers_Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "UpdateFarmers_Login",
+    "RelativePath": "Farmers_Login/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Farmers_Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "DeleteFarmers_Login",
+    "RelativePath": "Farmers_Login/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "UpdateFarmers_LoginStatus",
+    "RelativePath": "Farmers_Login/UpdateFarmers_LoginStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "UpdateFarmers",
+    "RelativePath": "Farmers/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Farmers",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "DeleteFarmers",
+    "RelativePath": "Farmers/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "UpdateFarmersStatus",
+    "RelativePath": "Farmers/UpdateFarmersStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "GetFarmFieldById",
+    "RelativePath": "FarmField",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "UpdateFarmField",
+    "RelativePath": "FarmField/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.FarmField",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "DeleteFarmField",
+    "RelativePath": "FarmField/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "UpdateFarmFieldStatus",
+    "RelativePath": "FarmField/UpdateFarmFieldStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "GetField_VisitById",
+    "RelativePath": "Field_Visit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "UpdateField_Visit",
+    "RelativePath": "Field_Visit/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Field_Visit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "DeleteField_Visit",
+    "RelativePath": "Field_Visit/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "UpdateField_VisitStatus",
+    "RelativePath": "Field_Visit/UpdateField_VisitStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "GetGenderById",
+    "RelativePath": "Gender",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "UpdateGender",
+    "RelativePath": "Gender/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Gender",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "DeleteGender",
+    "RelativePath": "Gender/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "UpdateGenderStatus",
+    "RelativePath": "Gender/UpdateGenderStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "GetAllAuthorisation",
+    "RelativePath": "GetAllAuthorisation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "GetAllBroadcast_Message",
+    "RelativePath": "GetAllBroadcast_Message",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "GetAllCampaign_Types",
+    "RelativePath": "GetAllCampaign_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "GetAllCampaigns",
+    "RelativePath": "GetAllCampaigns",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "GetAllCrop_Variety",
+    "RelativePath": "GetAllCrop_Variety",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "GetAllDistricts",
+    "RelativePath": "GetAllDistricts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "GetAllDocument_Type",
+    "RelativePath": "GetAllDocument_Type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "GetAllDocuments",
+    "RelativePath": "GetAllDocuments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "GetAllEmployee_Roles",
+    "RelativePath": "GetAllEmployee_Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "GetAllEmployee_Types",
+    "RelativePath": "GetAllEmployee_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "GetAllEmployees",
+    "RelativePath": "GetAllEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "GetAllFarm_Diseases",
+    "RelativePath": "GetAllFarm_Diseases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "GetAllFarmer_Group",
+    "RelativePath": "GetAllFarmer_Group",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "GetAllFarmer_login_visit_logs",
+    "RelativePath": "GetAllFarmer_login_visit_logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "GetAllFarmer_trip_sheets",
+    "RelativePath": "GetAllFarmer_trip_sheets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "GetAllFarmers",
+    "RelativePath": "GetAllFarmers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "GetAllFarmers_Login",
+    "RelativePath": "GetAllFarmers_Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "GetAllFarmField",
+    "RelativePath": "GetAllFarmField",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "GetAllField_Visit",
+    "RelativePath": "GetAllField_Visit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "GetAllGender",
+    "RelativePath": "GetAllGender",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "GetAllLogins",
+    "RelativePath": "GetAllLogins",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "GetAllLogins_Log",
+    "RelativePath": "GetAllLogins_Log",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "GetAllMandal_Blocks",
+    "RelativePath": "GetAllMandal_Blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "GetAllNursary",
+    "RelativePath": "GetAllNursary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "GetAllNursary_Activity",
+    "RelativePath": "GetAllNursary_Activity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "GetAllNursary_Batches",
+    "RelativePath": "GetAllNursary_Batches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "GetAllPhotos",
+    "RelativePath": "GetAllPhotos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "GetAllPlantationIdentification",
+    "RelativePath": "GetAllPlantationIdentification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "GetAllPoaching_FFB",
+    "RelativePath": "GetAllPoaching_FFB",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "GetAllPrivileges",
+    "RelativePath": "GetAllPrivileges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "GetAllReferral_Source",
+    "RelativePath": "GetAllReferral_Source",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "GetAllRole_Privileges",
+    "RelativePath": "GetAllRole_Privileges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "GetAllStates",
+    "RelativePath": "GetAllStates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "GetAllTraining_Videos",
+    "RelativePath": "GetAllTraining_Videos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "GetAllUsers",
+    "RelativePath": "GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "GetAllUsers_Types",
+    "RelativePath": "GetAllUsers_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "GetAllVillages",
+    "RelativePath": "GetAllVillages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "GetAllWorkflow",
+    "RelativePath": "GetAllWorkflow",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "GetAuthorisationLookup",
+    "RelativePath": "GetAuthorisationLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "GetBroadcast_MessageLookup",
+    "RelativePath": "GetBroadcast_MessageLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "GetCampaign_TypesLookup",
+    "RelativePath": "GetCampaign_TypesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "GetCampaignsLookup",
+    "RelativePath": "GetCampaignsLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "GetCrop_VarietyLookup",
+    "RelativePath": "GetCrop_VarietyLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "GetDistrictsLookup",
+    "RelativePath": "GetDistrictsLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "GetDocument_TypeLookup",
+    "RelativePath": "GetDocument_TypeLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "GetDocumentsLookup",
+    "RelativePath": "GetDocumentsLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "GetEmployee_RolesLookup",
+    "RelativePath": "GetEmployee_RolesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "GetEmployee_TypesLookup",
+    "RelativePath": "GetEmployee_TypesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "GetEmployeesLookup",
+    "RelativePath": "GetEmployeesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "GetFarm_DiseasesLookup",
+    "RelativePath": "GetFarm_DiseasesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "GetFarmer_GroupLookup",
+    "RelativePath": "GetFarmer_GroupLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "GetFarmer_login_visit_logsLookup",
+    "RelativePath": "GetFarmer_login_visit_logsLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "GetFarmer_trip_sheetsLookup",
+    "RelativePath": "GetFarmer_trip_sheetsLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "GetFarmers_LoginLookup",
+    "RelativePath": "GetFarmers_LoginLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "GetFarmersLookup",
+    "RelativePath": "GetFarmersLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "GetFarmFieldLookup",
+    "RelativePath": "GetFarmFieldLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "GetField_VisitLookup",
+    "RelativePath": "GetField_VisitLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "GetGenderLookup",
+    "RelativePath": "GetGenderLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "GetLogins_LogLookup",
+    "RelativePath": "GetLogins_LogLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "GetLoginsLookup",
+    "RelativePath": "GetLoginsLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "GetMandal_BlocksLookup",
+    "RelativePath": "GetMandal_BlocksLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginController",
+    "Method": "GetMenus",
+    "RelativePath": "GetMenus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "GetNursary_ActivityLookup",
+    "RelativePath": "GetNursary_ActivityLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "GetNursary_BatchesLookup",
+    "RelativePath": "GetNursary_BatchesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "GetNursaryLookup",
+    "RelativePath": "GetNursaryLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "GetPhotosLookup",
+    "RelativePath": "GetPhotosLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "GetPlantationIdentificationLookup",
+    "RelativePath": "GetPlantationIdentificationLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "GetPoaching_FFBLookup",
+    "RelativePath": "GetPoaching_FFBLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "GetPrivilegesLookup",
+    "RelativePath": "GetPrivilegesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "GetReferral_SourceLookup",
+    "RelativePath": "GetReferral_SourceLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "GetRole_PrivilegesLookup",
+    "RelativePath": "GetRole_PrivilegesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "GetRolesLookup",
+    "RelativePath": "GetRolesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "GetStatesLookup",
+    "RelativePath": "GetStatesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "GetTraining_VideosLookup",
+    "RelativePath": "GetTraining_VideosLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "GetUsers_TypesLookup",
+    "RelativePath": "GetUsers_TypesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "GetUsersLookup",
+    "RelativePath": "GetUsersLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "GetVillagesLookup",
+    "RelativePath": "GetVillagesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "GetWorkflowLookup",
+    "RelativePath": "GetWorkflowLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "GetLoginsById",
+    "RelativePath": "Logins",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "GetLogins_LogById",
+    "RelativePath": "Logins_Log",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "UpdateLogins_Log",
+    "RelativePath": "Logins_Log/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Logins_Log",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "DeleteLogins_Log",
+    "RelativePath": "Logins_Log/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "UpdateLogins_LogStatus",
+    "RelativePath": "Logins_Log/UpdateLogins_LogStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "UpdateLogins",
+    "RelativePath": "Logins/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Logins",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "DeleteLogins",
+    "RelativePath": "Logins/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "UpdateLoginsStatus",
+    "RelativePath": "Logins/UpdateLoginsStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "GetMandal_BlocksById",
+    "RelativePath": "Mandal_Blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "UpdateMandal_Blocks",
+    "RelativePath": "Mandal_Blocks/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Mandal_Blocks",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "DeleteMandal_Blocks",
+    "RelativePath": "Mandal_Blocks/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "UpdateMandal_BlocksStatus",
+    "RelativePath": "Mandal_Blocks/UpdateMandal_BlocksStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "GetNursaryById",
+    "RelativePath": "Nursary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "GetNursary_ActivityById",
+    "RelativePath": "Nursary_Activity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "UpdateNursary_Activity",
+    "RelativePath": "Nursary_Activity/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Nursary_Activity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "DeleteNursary_Activity",
+    "RelativePath": "Nursary_Activity/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "UpdateNursary_ActivityStatus",
+    "RelativePath": "Nursary_Activity/UpdateNursary_ActivityStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "GetNursary_BatchesById",
+    "RelativePath": "Nursary_Batches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "UpdateNursary_Batches",
+    "RelativePath": "Nursary_Batches/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Nursary_Batches",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "DeleteNursary_Batches",
+    "RelativePath": "Nursary_Batches/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "UpdateNursary_BatchesStatus",
+    "RelativePath": "Nursary_Batches/UpdateNursary_BatchesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "UpdateNursary",
+    "RelativePath": "Nursary/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Nursary",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "DeleteNursary",
+    "RelativePath": "Nursary/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "UpdateNursaryStatus",
+    "RelativePath": "Nursary/UpdateNursaryStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "GetPhotosById",
+    "RelativePath": "Photos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "UpdatePhotos",
+    "RelativePath": "Photos/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Photos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "DeletePhotos",
+    "RelativePath": "Photos/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "UpdatePhotosStatus",
+    "RelativePath": "Photos/UpdatePhotosStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "GetPlantationIdentificationById",
+    "RelativePath": "PlantationIdentification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "UpdatePlantationIdentification",
+    "RelativePath": "PlantationIdentification/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.PlantationIdentification",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "DeletePlantationIdentification",
+    "RelativePath": "PlantationIdentification/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "UpdatePlantationIdentificationStatus",
+    "RelativePath": "PlantationIdentification/UpdatePlantationIdentificationStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "GetPoaching_FFBById",
+    "RelativePath": "Poaching_FFB",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "UpdatePoaching_FFB",
+    "RelativePath": "Poaching_FFB/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Poaching_FFB",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "DeletePoaching_FFB",
+    "RelativePath": "Poaching_FFB/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "UpdatePoaching_FFBStatus",
+    "RelativePath": "Poaching_FFB/UpdatePoaching_FFBStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "GetPrivilegesById",
+    "RelativePath": "Privileges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "UpdatePrivileges",
+    "RelativePath": "Privileges/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Privileges",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "DeletePrivileges",
+    "RelativePath": "Privileges/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "UpdatePrivilegesStatus",
+    "RelativePath": "Privileges/UpdatePrivilegesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "GetReferral_SourceById",
+    "RelativePath": "Referral_Source",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "UpdateReferral_Source",
+    "RelativePath": "Referral_Source/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Referral_Source",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "DeleteReferral_Source",
+    "RelativePath": "Referral_Source/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "UpdateReferral_SourceStatus",
+    "RelativePath": "Referral_Source/UpdateReferral_SourceStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "GetRole_PrivilegesById",
+    "RelativePath": "Role_Privileges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "UpdateRole_Privileges",
+    "RelativePath": "Role_Privileges/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Role_Privileges",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "DeleteRole_Privileges",
+    "RelativePath": "Role_Privileges/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "UpdateRole_PrivilegesStatus",
+    "RelativePath": "Role_Privileges/UpdateRole_PrivilegesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "GetRolesById",
+    "RelativePath": "Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "UpdateRoles",
+    "RelativePath": "Roles/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "DeleteRoles",
+    "RelativePath": "Roles/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "UpdateRolesStatus",
+    "RelativePath": "Roles/UpdateRolesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.AuthorisationController",
+    "Method": "SearchAuthorisation",
+    "RelativePath": "SearchAuthorisation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Broadcast_MessageController",
+    "Method": "SearchBroadcast_Message",
+    "RelativePath": "SearchBroadcast_Message",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Campaign_TypesController",
+    "Method": "SearchCampaign_Types",
+    "RelativePath": "SearchCampaign_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.CampaignsController",
+    "Method": "SearchCampaigns",
+    "RelativePath": "SearchCampaigns",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Crop_VarietyController",
+    "Method": "SearchCrop_Variety",
+    "RelativePath": "SearchCrop_Variety",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DistrictsController",
+    "Method": "SearchDistricts",
+    "RelativePath": "SearchDistricts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchFields",
+        "Type": "Farm.Models.SearchFields",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Document_TypeController",
+    "Method": "SearchDocument_Type",
+    "RelativePath": "SearchDocument_Type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.DocumentsController",
+    "Method": "SearchDocuments",
+    "RelativePath": "SearchDocuments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_RolesController",
+    "Method": "SearchEmployee_Roles",
+    "RelativePath": "SearchEmployee_Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Employee_TypesController",
+    "Method": "SearchEmployee_Types",
+    "RelativePath": "SearchEmployee_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.EmployeesController",
+    "Method": "SearchEmployees",
+    "RelativePath": "SearchEmployees",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farm_DiseasesController",
+    "Method": "SearchFarm_Diseases",
+    "RelativePath": "SearchFarm_Diseases",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_GroupController",
+    "Method": "SearchFarmer_Group",
+    "RelativePath": "SearchFarmer_Group",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_login_visit_logsController",
+    "Method": "SearchFarmer_login_visit_logs",
+    "RelativePath": "SearchFarmer_login_visit_logs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmer_trip_sheetsController",
+    "Method": "SearchFarmer_trip_sheets",
+    "RelativePath": "SearchFarmer_trip_sheets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmersController",
+    "Method": "SearchFarmers",
+    "RelativePath": "SearchFarmers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Farmers_LoginController",
+    "Method": "SearchFarmers_Login",
+    "RelativePath": "SearchFarmers_Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.FarmFieldController",
+    "Method": "SearchFarmField",
+    "RelativePath": "SearchFarmField",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Field_VisitController",
+    "Method": "SearchField_Visit",
+    "RelativePath": "SearchField_Visit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.GenderController",
+    "Method": "SearchGender",
+    "RelativePath": "SearchGender",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.LoginsController",
+    "Method": "SearchLogins",
+    "RelativePath": "SearchLogins",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Logins_LogController",
+    "Method": "SearchLogins_Log",
+    "RelativePath": "SearchLogins_Log",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Mandal_BlocksController",
+    "Method": "SearchMandal_Blocks",
+    "RelativePath": "SearchMandal_Blocks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.NursaryController",
+    "Method": "SearchNursary",
+    "RelativePath": "SearchNursary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_ActivityController",
+    "Method": "SearchNursary_Activity",
+    "RelativePath": "SearchNursary_Activity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Nursary_BatchesController",
+    "Method": "SearchNursary_Batches",
+    "RelativePath": "SearchNursary_Batches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PhotosController",
+    "Method": "SearchPhotos",
+    "RelativePath": "SearchPhotos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PlantationIdentificationController",
+    "Method": "SearchPlantationIdentification",
+    "RelativePath": "SearchPlantationIdentification",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Poaching_FFBController",
+    "Method": "SearchPoaching_FFB",
+    "RelativePath": "SearchPoaching_FFB",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.PrivilegesController",
+    "Method": "SearchPrivileges",
+    "RelativePath": "SearchPrivileges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Referral_SourceController",
+    "Method": "SearchReferral_Source",
+    "RelativePath": "SearchReferral_Source",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Role_PrivilegesController",
+    "Method": "SearchRole_Privileges",
+    "RelativePath": "SearchRole_Privileges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.RolesController",
+    "Method": "SearchRoles",
+    "RelativePath": "SearchRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "SearchStates",
+    "RelativePath": "SearchStates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "SearchTraining_Videos",
+    "RelativePath": "SearchTraining_Videos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "SearchUsers",
+    "RelativePath": "SearchUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "SearchUsers_Types",
+    "RelativePath": "SearchUsers_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "SearchVillages",
+    "RelativePath": "SearchVillages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "SearchWorkflow",
+    "RelativePath": "SearchWorkflow",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchText",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isColumnSearch",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "columnDataType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "operatorType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "value2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "GetStatesById",
+    "RelativePath": "States",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "UpdateStates",
+    "RelativePath": "States/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.States",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "DeleteStates",
+    "RelativePath": "States/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.StatesController",
+    "Method": "UpdateStatesStatus",
+    "RelativePath": "States/UpdateStatesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "GetTraining_VideosById",
+    "RelativePath": "Training_Videos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "UpdateTraining_Videos",
+    "RelativePath": "Training_Videos/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Training_Videos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "DeleteTraining_Videos",
+    "RelativePath": "Training_Videos/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Training_VideosController",
+    "Method": "UpdateTraining_VideosStatus",
+    "RelativePath": "Training_Videos/UpdateTraining_VideosStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "GetUsersById",
+    "RelativePath": "Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "GetUsers_TypesById",
+    "RelativePath": "Users_Types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "UpdateUsers_Types",
+    "RelativePath": "Users_Types/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Users_Types",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "DeleteUsers_Types",
+    "RelativePath": "Users_Types/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.Users_TypesController",
+    "Method": "UpdateUsers_TypesStatus",
+    "RelativePath": "Users_Types/UpdateUsers_TypesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "UpdateUsers",
+    "RelativePath": "Users/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Users",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "DeleteUsers",
+    "RelativePath": "Users/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UsersController",
+    "Method": "UpdateUsersStatus",
+    "RelativePath": "Users/UpdateUsersStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "UpdateTableByColumns",
+    "RelativePath": "Util/{updateInfo}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Object",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateInfo",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetDashboardInfo",
+    "RelativePath": "Util/GetDashboardInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetFarmersLookup",
+    "RelativePath": "Util/GetFarmersLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchString",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetFarmFieldByFarmerLookup",
+    "RelativePath": "Util/GetFarmFieldByFarmerLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "farmerId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetImageByName",
+    "RelativePath": "Util/GetImageByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetMandalByVillage",
+    "RelativePath": "Util/GetMandalByVillage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "villageId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetRolePrivilegesByRole",
+    "RelativePath": "Util/GetRolePrivilegesByRole",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userTypeId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String[]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "GetVillagesLookup",
+    "RelativePath": "Util/GetVillagesLookup",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchString",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "selectedList",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "InsertTableByColumns",
+    "RelativePath": "Util/insertInfo",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "info",
+        "Type": "System.Object",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "UpdateRolePrivilegesByRole",
+    "RelativePath": "Util/UpdateRolePrivilegesByRole",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "privilegesList",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.UtilController",
+    "Method": "UploadImage",
+    "RelativePath": "Util/UploadImage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "GetVillagesById",
+    "RelativePath": "Villages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "UpdateVillages",
+    "RelativePath": "Villages/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Villages",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "DeleteVillages",
+    "RelativePath": "Villages/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.VillagesController",
+    "Method": "UpdateVillagesStatus",
+    "RelativePath": "Villages/UpdateVillagesStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StarterAPI.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[StarterAPI.WeatherForecast, StarterAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "GetWorkflowById",
+    "RelativePath": "Workflow",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "UpdateWorkflow",
+    "RelativePath": "Workflow/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateRequest",
+        "Type": "Farm.Models.Workflow",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "DeleteWorkflow",
+    "RelativePath": "Workflow/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Farm.Controllers.WorkflowController",
+    "Method": "UpdateWorkflowStatus",
+    "RelativePath": "Workflow/UpdateWorkflowStatus/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

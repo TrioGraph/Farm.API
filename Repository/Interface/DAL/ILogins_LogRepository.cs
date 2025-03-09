@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Logins_Log>> DeleteLogins_Log(int roles);
        
-        Dictionary<string, object> SearchLogins_Log(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchLogins_Log(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

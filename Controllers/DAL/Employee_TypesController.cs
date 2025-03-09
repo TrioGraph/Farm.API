@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IEmployee_TypesRepository employee_TypesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Employee_TypesController> _logger;
-        public Employee_TypesController(IEmployee_TypesRepository employee_TypesRepository, IMapper mapper, ILogger<Employee_TypesController> logger)
+	private IUtilityHelper utilityHelper;
+        public Employee_TypesController(IEmployee_TypesRepository employee_TypesRepository, IMapper mapper, ILogger<Employee_TypesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.employee_TypesRepository = employee_TypesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllEmployee_Types")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchEmployee_Types")]
-        public async Task<IActionResult> SearchEmployee_Types(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchEmployee_Types(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var employee_typesList = employee_TypesRepository.SearchEmployee_Types(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var employee_typesList = employee_TypesRepository.SearchEmployee_Types(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {employee_typesList?.Count()}");
                 return Ok(employee_typesList);
             }

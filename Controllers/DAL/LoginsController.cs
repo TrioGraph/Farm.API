@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly ILoginsRepository loginsRepository;
         private readonly IMapper mapper;
         private readonly ILogger<LoginsController> _logger;
-        public LoginsController(ILoginsRepository loginsRepository, IMapper mapper, ILogger<LoginsController> logger)
+	private IUtilityHelper utilityHelper;
+        public LoginsController(ILoginsRepository loginsRepository, IMapper mapper, ILogger<LoginsController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.loginsRepository = loginsRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllLogins")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchLogins")]
-        public async Task<IActionResult> SearchLogins(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchLogins(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var loginsList = loginsRepository.SearchLogins(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var loginsList = loginsRepository.SearchLogins(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {loginsList?.Count()}");
                 return Ok(loginsList);
             }

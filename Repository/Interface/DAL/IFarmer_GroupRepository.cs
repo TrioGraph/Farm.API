@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Farmer_Group>> DeleteFarmer_Group(int roles);
        
-        Dictionary<string, object> SearchFarmer_Group(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchFarmer_Group(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

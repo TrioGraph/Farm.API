@@ -7,7 +7,7 @@ namespace Farm.Repositories
     {
         Task<List<Farmers>> GetAllFarmers();
         
-        Task<IEnumerable<object>> GetFarmersLookup(string searchText);
+        Task<IEnumerable<object>> GetFarmersLookup();
 		
         Task<Farmers> GetFarmersById(int id);
 
@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Farmers>> DeleteFarmers(int roles);
        
-        Dictionary<string, object> SearchFarmers(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchFarmers(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

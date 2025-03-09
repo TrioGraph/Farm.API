@@ -93,7 +93,7 @@ namespace Farm.Repositories
         return ((int)maxId + 3);
       }
 
-public Dictionary<string, object> SearchField_Visit(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection)
+public Dictionary<string, object> SearchField_Visit(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection)
         {
             Dictionary<string, object> result = new Dictionary<string, object>();
             try
@@ -104,6 +104,7 @@ public Dictionary<string, object> SearchField_Visit(string searchString, int pag
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 //Add the parameter to the Parameters property of SqlCommand object
                 adapter.SelectCommand = new SqlCommand("GetSearchField_Visit", new SqlConnection(ConnectionString));
+                adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@userId", SqlDbType = SqlDbType.VarChar, Value = userId, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@txt", SqlDbType = SqlDbType.VarChar, Value = searchString, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageIndex", SqlDbType = SqlDbType.VarChar, Value = pageNumber, Direction = ParameterDirection.Input });
                 adapter.SelectCommand.Parameters.Add(new SqlParameter { ParameterName = "@pageSize", SqlDbType = SqlDbType.VarChar, Value = pageSize, Direction = ParameterDirection.Input });

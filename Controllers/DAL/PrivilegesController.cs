@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IPrivilegesRepository privilegesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<PrivilegesController> _logger;
-        public PrivilegesController(IPrivilegesRepository privilegesRepository, IMapper mapper, ILogger<PrivilegesController> logger)
+	private IUtilityHelper utilityHelper;
+        public PrivilegesController(IPrivilegesRepository privilegesRepository, IMapper mapper, ILogger<PrivilegesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.privilegesRepository = privilegesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllPrivileges")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchPrivileges")]
-        public async Task<IActionResult> SearchPrivileges(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchPrivileges(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var privilegesList = privilegesRepository.SearchPrivileges(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var privilegesList = privilegesRepository.SearchPrivileges(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {privilegesList?.Count()}");
                 return Ok(privilegesList);
             }

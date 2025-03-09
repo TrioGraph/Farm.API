@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IStatesRepository statesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<StatesController> _logger;
-        public StatesController(IStatesRepository statesRepository, IMapper mapper, ILogger<StatesController> logger)
+	private IUtilityHelper utilityHelper;
+        public StatesController(IStatesRepository statesRepository, IMapper mapper, ILogger<StatesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.statesRepository = statesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllStates")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchStates")]
-        public async Task<IActionResult> SearchStates(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchStates(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var statesList = statesRepository.SearchStates(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var statesList = statesRepository.SearchStates(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {statesList?.Count()}");
                 return Ok(statesList);
             }

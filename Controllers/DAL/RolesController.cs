@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IRolesRepository rolesRepository;
         private readonly IMapper mapper;
         private readonly ILogger<RolesController> _logger;
-        public RolesController(IRolesRepository rolesRepository, IMapper mapper, ILogger<RolesController> logger)
+	private IUtilityHelper utilityHelper;
+        public RolesController(IRolesRepository rolesRepository, IMapper mapper, ILogger<RolesController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.rolesRepository = rolesRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllRoles")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchRoles")]
-        public async Task<IActionResult> SearchRoles(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchRoles(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var rolesList = rolesRepository.SearchRoles(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var rolesList = rolesRepository.SearchRoles(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {rolesList?.Count()}");
                 return Ok(rolesList);
             }

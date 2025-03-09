@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IFarmFieldRepository farmFieldRepository;
         private readonly IMapper mapper;
         private readonly ILogger<FarmFieldController> _logger;
-        public FarmFieldController(IFarmFieldRepository farmFieldRepository, IMapper mapper, ILogger<FarmFieldController> logger)
+	private IUtilityHelper utilityHelper;
+        public FarmFieldController(IFarmFieldRepository farmFieldRepository, IMapper mapper, ILogger<FarmFieldController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.farmFieldRepository = farmFieldRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllFarmField")]
@@ -167,25 +170,9 @@ namespace Farm.Controllers
             }
         }
 
-        [HttpGet("~/GetFarmFieldLookupByFarmerId/farmerId")]
-        public async Task<IActionResult> GetFarmFieldLookupByFarmerId(int farmerId)
-        {
-            try
-            {
-                _logger.LogInformation($"Start");
-                var farmfieldList = await farmFieldRepository.GetFarmFieldLookupByFarmerId(farmerId);
-                _logger.LogInformation($"database call done successfully with {farmfieldList?.Count()}");
-                return Ok(farmfieldList);
-            }
-            catch (System.Exception ex)
-            {
-                _logger.LogError(ex, ex.ToString());
-                throw;
-            }
-        }
-
         [HttpGet("~/SearchFarmField")]
-        public async Task<IActionResult> SearchFarmField(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchFarmField(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -194,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var farmfieldList = farmFieldRepository.SearchFarmField(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var farmfieldList = farmFieldRepository.SearchFarmField(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {farmfieldList?.Count()}");
                 return Ok(farmfieldList);
             }

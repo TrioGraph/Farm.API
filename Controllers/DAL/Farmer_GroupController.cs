@@ -14,11 +14,14 @@ namespace Farm.Controllers
         private readonly IFarmer_GroupRepository farmer_GroupRepository;
         private readonly IMapper mapper;
         private readonly ILogger<Farmer_GroupController> _logger;
-        public Farmer_GroupController(IFarmer_GroupRepository farmer_GroupRepository, IMapper mapper, ILogger<Farmer_GroupController> logger)
+	private IUtilityHelper utilityHelper;
+        public Farmer_GroupController(IFarmer_GroupRepository farmer_GroupRepository, IMapper mapper, ILogger<Farmer_GroupController> logger,
+	IUtilityHelper utilityHelper)
         {
             this.farmer_GroupRepository = farmer_GroupRepository;
             mapper = mapper;
             _logger = logger;
+	    this.utilityHelper = utilityHelper;
         }
 
         [HttpGet("~/GetAllFarmer_Group")]
@@ -168,7 +171,8 @@ namespace Farm.Controllers
         }
 
         [HttpGet("~/SearchFarmer_Group")]
-        public async Task<IActionResult> SearchFarmer_Group(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC")
+        public async Task<IActionResult> SearchFarmer_Group(string searchText = "null", int pageNumber = 1, int pageSize = 10, string sortColumn = "Id", string sortOrder = "DESC",
+        bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "")
         {
             try
             {
@@ -177,7 +181,9 @@ namespace Farm.Controllers
                 {
                     searchText = "";
                 }
-                var farmer_groupList = farmer_GroupRepository.SearchFarmer_Group(searchText, pageNumber, pageSize, sortColumn, sortOrder);
+		string userId = utilityHelper.GetUserFromRequest(Request);
+                var farmer_groupList = farmer_GroupRepository.SearchFarmer_Group(int.Parse(userId),searchText, pageNumber, pageSize, sortColumn, sortOrder,
+                        isColumnSearch, columnDataType, operatorType, value1, value2);
                 _logger.LogInformation($"database call done successfully with {farmer_groupList?.Count()}");
                 return Ok(farmer_groupList);
             }

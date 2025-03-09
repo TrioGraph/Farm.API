@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Farm_Diseases>> DeleteFarm_Diseases(int roles);
        
-        Dictionary<string, object> SearchFarm_Diseases(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchFarm_Diseases(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }

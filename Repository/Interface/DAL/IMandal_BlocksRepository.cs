@@ -19,7 +19,7 @@ namespace Farm.Repositories
 
         Task<IEnumerable<Mandal_Blocks>> DeleteMandal_Blocks(int roles);
        
-        Dictionary<string, object> SearchMandal_Blocks(string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection);
+        Dictionary<string, object> SearchMandal_Blocks(int userId, string searchString, int pageNumber, int pageSize, string sortColumn, string sortDirection, bool isColumnSearch = false, string columnName = "", string columnDataType = "", string operatorType = "", string value1 = "", string value2 = "");
 
     }
 }
